@@ -21,7 +21,7 @@ nav {
 
 
 .brandlogo {
-    max-width: 100px;
+    max-width: 110px;
     max-height: 30px;
 }
 
@@ -32,6 +32,9 @@ nav .brandlogo {
 .menu {
     display: flex;
     justify-content: space-between;
+}
+
+nav .menu {
     gap: 48px;
 }
 
@@ -211,13 +214,13 @@ h1 {
     display: flex;
     flex-direction: column;
     width: 75%;
-    min-width: 1280px;
 }
 
 .topCateg {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .topCateg button {
@@ -238,9 +241,11 @@ h2 {
 
 .footerCateg {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 40px;
     margin-top: 40px;
+    width: 100%;
 }
 
 .footerCateg span {
@@ -313,7 +318,7 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    min-width: 1280px;
+
     width: 75%;
     gap: 96px;
 }
@@ -408,14 +413,197 @@ h3 {
     height: 434px;
 }
 
+.learnSection {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 142px;
+}
+
+.learnMore {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+}
+
+.learnMoreLeft {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 55px;
+    padding-top: 150px;
+}
+
+h4 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.courseLeft p {
+    margin-bottom: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+.postSection {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 142px;
+    background: linear-gradient(180deg, rgba(231, 249, 253, 0) 0%, #E7F9FD 100%);
+
+}
+
+.posts {
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    gap: 80px;
+}
+
+h5 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.topPosts p {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.postFlex {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.postBox {
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    height: 445.44px;
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+}
+
+.postHeader {
+    display: flex;
+    justify-content: space-between;
+    height: 41.76px;
+    width: 290px;
+    padding-left: 7.73px;
+    padding-top: 8.51px;
+    padding-bottom: 8.51px;
+    padding-right: 11.6px;
+}
+
+.postHeaderLeft {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    gap: 5px;
+}
+
+.postHeaderLeft span {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.postFoodie {
+    width: 24.75px;
+    height: 24.75px;
+    border-radius: 100%;
+}
+
+.postAuthor {
+    font-size: 10.05px;
+    font-weight: 600;
+}
+
+.verifed {
+    width: 7.65px;
+    height: 7.58px;
+}
+
+.postLocation {
+    font-size: 8.51px;
+    font-weight: 400;
+}
+
+.moreIcon {
+    Width: 13px;
+    Height: 5px;
+    margin-top: 11.21px;
+}
 
 
+.postImg {
+    width: 100%;
+    height: 290px;
+    overflow: hidden;
+}
 
+.photoNum {
+    position: absolute;
+    Top: 50px;
+    Left: 252px
+}
 
+.postFoot {
+    display: flex;
+    flex-direction: column;
+    height: 113.68px;
+    width: 290px;
+    padding-left: 10.83px;
+    padding-right: 9.81px;
+    gap: 8px;
+}
 
+.interaction {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 7px;
+    position: relative;
+}
 
+.likes {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
 
+.likes img {
+    width: 13.15px;
+    height: 13.15px;
+    border-radius: 100%;
+}
 
+.likes p {
+    font-size: 10.05px;
+    font-weight: 400;
+}
+
+.caption {
+    font-size: 10.05px;
+    font-weight: 400;
+}
+
+.postDate {
+    font-size: 8.51px;
+    font-weight: 400;
+}
 
 
 
@@ -430,12 +618,11 @@ footer {
     justify-content: center;
     width: 100%;
     margin-top: 180px;
-    margin-bottom: 48px;
+    margin-bottom: 60px;
 }
 
 .footer {
     width: 75%;
-    min-width: 1280px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -462,6 +649,10 @@ footer {
 
 }
 
+footer .menu {
+    gap: 48px;
+}
+
 .footerHr {
     width: 100%;
 }
@@ -480,4 +671,76 @@ footer {
     font-size: 18px;
     font-weight: 400;
 
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        justify-content: center;
+    }
+
+    nav .brandlogo {
+        margin: auto;
+    }
+
+    nav .menu {
+        display: none;
+    }
+
+    nav .social {
+        display: none;
+    }
+
+    .startsection {
+        display: none;
+    }
+
+    .topCateg {
+        justify-content: center;
+    }
+
+    .topCateg button {
+        margin-top: 42px;
+    }
+
+    .course img {
+        display: none;
+    }
+
+    h4 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .courseLeft {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .topFooter {
+        flex-wrap: wrap;
+    }
+
+    .footerLeft {
+        margin-bottom: 25px;
+    }
+
+    footer .menu {
+        gap: 30px;
+    }
+
+    .bottomFooter {
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .bottomFooter span {
+        display: none;
+    }
+
+    .footer {
+        width: 80%;
+    }
 }
