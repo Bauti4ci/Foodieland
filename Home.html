@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="HomeStyles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -60,14 +61,15 @@
     <main>
 
         <section class="startsection">
-            <div class="start">
+            <div class="hiddenMobile start">
                 <div class="leftstart">
                     <span class="firstbtn">
                         <img src="Imagenes/start/pergamino.png" alt="">
-                        <p class="subH">Hot Recipes</p>
+                        <p>Hot Recipes</p>
                     </span>
                     <h1>Spicy delicious <br> chiken wings</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quos iste laboriosam consequatur
+                    <p class="subH">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quos iste laboriosam
+                        consequatur
                         pariatur error obcaecati placeat unde nihil facilis!</p>
                     <div class="labels">
                         <span class="secondbtn">
@@ -87,15 +89,20 @@
                         <button class="btn"> View recipies <img src="Svg/icons/play.svg" alt=""></button>
                     </div>
                 </div>
-                <img src="Imagenes/start/Mask Group.png" alt="Pollo" class="rightImg">
-                <img src="Imagenes/start/Badge.png" alt="" class="badge">
+                <div class="rightStart">
+                    <img src="Imagenes/start/Mask Group.png" alt="Pollo" class="rightImg">
+                    <img src="Imagenes/start/Badge.png" alt="" class="badge">
+                </div>
             </div>
-            <span class="firstbtn" id="hidden">
+            <span class="hidden firstbtn">
                 <img src="Imagenes/start/pergamino.png" alt="">
-                <p class="subH">Hot Recipes</p>
+                <p>Hot Recipes</p>
             </span>
             <div class="mobileStart">
-                <img src="Imagenes/start/pollomobile.jpeg" alt="Pollo" class="mobileStartImg">
+                <div class="startImgDiv">
+                    <img src="Imagenes/start/pollomobile.jpeg" alt="Pollo" class="mobileStartImg">
+                    <img src="Imagenes/start/Badge.png" alt="" class="mobileBadge">
+                </div>
                 <h1>Spicy delicious chiken wings</h1>
                 <p class="startContext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quos iste
                     laboriosam consequatur
@@ -114,7 +121,7 @@
                     </div>
                     <button class="btn"> View recipies <img src="Svg/icons/play.svg" alt=""></button>
                 </div>
-                <img src="Imagenes/start/Badge.png" alt="" class="badge">
+
             </div>
         </section>
 
@@ -255,7 +262,7 @@
                     <button class="btn">Learn More</button>
                 </div>
                 <img src="Imagenes/learnMore/Group 880.png" alt="" class="learnMoreRight">
-                <button class="learnMoreBtn">Learn More</button>
+                <button class="hidden btn">Learn More</button>
             </div>
         </section>
 
@@ -509,8 +516,8 @@
                     <input type="email" class="inboxInput" placeholder="Your email address...">
                     <button class="btn">Subscribe</button>
                 </form>
-                <img src="Imagenes/inbox/left.png" alt="" class="inboxImgLeft">
-                <img src="Imagenes/inbox/right.png" alt="" class="inboxImgRight">
+                <img src="Imagenes/inbox/left.png" alt="" class="hiddenMobile inboxImgLeft">
+                <img src="Imagenes/inbox/right.png" alt="" class="hiddenMobile inboxImgRight">
             </div>
         </section>
 
@@ -523,7 +530,7 @@
                     <img src="Imagenes/nav/Foodieland..png" alt="Foodieland" class="brandlogo">
                     <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, </p>
                 </div>
-                <nav class="menu" id="footerMenu">
+                <nav class="menu footerMenu">
                     <ul>
                         <a class="navbtn">Recipies</a>
                         <a class="navbtn">Blog</a>
