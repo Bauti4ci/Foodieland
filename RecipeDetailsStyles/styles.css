@@ -1,0 +1,101 @@
+.headerSection {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 53px;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.author {
+    align-items: center;
+    align-content: center;
+    width: 26.63%;
+    min-width: 165px;
+    gap: 10px;
+    text-align: start;
+}
+
+.name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+}
+
+.date {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+
+
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    align-content: center;
+}
+
+.detailsRight {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    margin-left: 17%;
+}
+
+.detail {
+    display: flex;
+    min-width: 113px;
+    gap: 8px;
+    align-items: center;
+    align-content: center;
+}
+
+.dividers {
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.timeType {
+    font-size: 0.75rem;
+    font-weight: 500;
+
+}
+
+.time {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+.foodType {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+.icons {
+    width: 21.24%;
+    height: auto;
+}
