@@ -1,21 +1,22 @@
-.startsection {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 42px;
+section {
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .start {
+    margin-top: 42px;
     display: flex;
     justify-content: space-between;
     border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 50px;
-    min-width: 1280px;
-    min-height: 640px;
-    width: 75%;
+    width: 88%;
     overflow: hidden;
+    min-height: 640px;
+    background-image: url("../Imagenes/start/pollomobile.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
     background-color: rgba(231, 250, 254, 1);
-
 }
 
 .leftstart {
@@ -24,9 +25,10 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
-    width: max-content;
+    width: 48%;
     background-color: rgba(231, 250, 254, 1);
     padding: 50px;
+    position: relative;
 
 }
 
@@ -83,26 +85,19 @@ h1 {
 
 .startFooter {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     background-color: transparent;
 }
 
-.rightStart {
-    position: relative;
-}
-
-.rightImg {
-    width: auto;
-    height: 100%;
-}
-
 .badge {
     width: 150px;
     height: 150px;
     position: absolute;
-    left: -8%;
+    right: -14%;
     top: 50px;
 }
 
@@ -110,17 +105,11 @@ h1 {
     display: none;
 }
 
-.categoriesSection {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 128px;
-}
 
 .categories {
+    margin-top: 128px;
     display: flex;
     flex-direction: column;
-    width: 75%;
 }
 
 .topCateg {
@@ -214,20 +203,15 @@ h2 {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.05) 100%);
 }
 
-.recipesSection {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 183px;
-}
 
 .recipes {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-content: start;
-    width: 75%;
     gap: 96px;
+    margin-top: 183px;
+
 }
 
 .recipesTop {
@@ -323,17 +307,11 @@ h3 {
     height: auto;
 }
 
-.learnSection {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 142px;
-}
 
 .learnMore {
     display: flex;
     justify-content: center;
-    width: 75%;
+    margin-top: 142px;
 }
 
 .learnMoreLeft {
@@ -536,17 +514,10 @@ h5 {
 }
 
 
-.dailyRecipesSection {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 160px;
-}
-
 .dailyRecipes {
     display: flex;
-    width: 75%;
     flex-direction: column;
+    margin-top: 160px;
 }
 
 .dailyTop {
@@ -628,15 +599,9 @@ h6 {
 }
 
 
-.inboxSection {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 160px;
-}
+
 
 .inbox {
-    width: 75%;
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -648,6 +613,8 @@ h6 {
     border-radius: 50px;
     position: relative;
     overflow: hidden;
+    margin-top: 160px;
+
 }
 
 .h7 {
@@ -714,7 +681,7 @@ h6 {
     display: none;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1020px) {
 
     .hidden {
         display: flex;

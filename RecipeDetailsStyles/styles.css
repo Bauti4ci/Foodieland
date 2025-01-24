@@ -6,7 +6,7 @@
 }
 
 .header {
-    width: 75%;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     gap: 53px;
+    width: 80%;
 }
 
 h1 {
@@ -49,7 +50,7 @@ h1 {
 .details {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 50%;
     align-items: center;
     align-content: center;
 }
@@ -97,5 +98,16 @@ h1 {
 
 .icons {
     width: 21.24%;
+    height: auto;
+}
+
+.options {
+    width: 15%;
+    display: flex;
+
+}
+
+.optionsBtn img {
+    width: 80px;
     height: auto;
 }
