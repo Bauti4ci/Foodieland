@@ -7,6 +7,10 @@
     font-style: normal;
 }
 
+.extended {
+    display: none;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -16,13 +20,6 @@ body {
     background-color: white;
 }
 
-#close {
-    display: none;
-}
-
-#open {
-    display: none;
-}
 
 .btn {
     display: flex;
@@ -90,16 +87,23 @@ ul {
     gap: 16px;
 }
 
+header {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: white;
+    z-index: 10;
+}
+
 
 .nav {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
     margin-bottom: 40px;
-}
-
-.nav span {
-    display: none;
+    background-color: white;
+    position: relative;
 }
 
 .nav .brandlogo {
@@ -120,10 +124,6 @@ ul {
 
 .navHr {
     border: 1px solid rgba(0, 0, 0, 0.1)
-}
-
-.extended {
-    display: none;
 }
 
 
@@ -193,16 +193,33 @@ footer {
 
 @media (max-width: 768px) {
 
+    .extended {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        align-content: center;
+        background: linear-gradient(180deg, rgba(112, 130, 70, 0) 0%, rgba(112, 130, 70, 0.1) 100%);
+    }
+
+    .extended .menu ul {
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .hide {
+        display: none;
+    }
+
     .nav {
         padding-left: 4%;
         padding-right: 4%;
-    }
-
-    .nav span {
-        display: inline-block;
-        /* Valores en % */
-        width: 24px;
-        height: auto;
+        display: flex;
+        justify-content: center;
     }
 
     .nav .brandlogo {
@@ -221,41 +238,15 @@ footer {
 
     .minimized {
         display: inline-block;
-        width: 1.5rem;
+        width: 32px;
+        position: absolute;
+        top: -40%;
+        right: 5%;
     }
 
-
-    .extended {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-        width: 100%;
-        height: auto;
-        align-items: center;
-        align-content: center;
-        background: linear-gradient(180deg, rgba(112, 130, 70, 0) 0%, rgba(112, 130, 70, 0.1) 100%);
+    .brandlogo {
+        margin: 0 auto;
     }
-
-    #open {
-        display: none;
-    }
-
-    #dynamic {
-        display: none;
-    }
-
-    #close {
-        display: inline-block;
-    }
-
-
-    .extended .menu ul {
-        flex-direction: column;
-        gap: 16px;
-        margin-bottom: 24px;
-        text-align: center;
-    }
-
 
     .topFooter ul {
         justify-content: space-between;

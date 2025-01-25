@@ -1,19 +1,30 @@
 const dynamic = document.getElementById('dynamic');
-const openIcon = document.getElementById('open');
-const closeIcon = document.getElementById('close');
+
+const openClose = document.getElementById('openClose');
+
+let isOpen = false;
 
 function dynamicMenu() {
+    if (!isOpen) {
 
-    if (dynamic.style.display === 'none') {
-        dynamic.style.display = 'flex';
-        openIcon.style.display = 'block';
-        closeIcon.style.display = 'none';
+        openClose.src = "Svg/nav/closingX.svg";
+
+        dynamic.classList.remove('hide');
+
+        dynamic.classList.add('extended');
+
+        isOpen = true;
     } else {
-        dynamic.style.display = 'none';
-        openIcon.style.display = 'none';
-        closeIcon.style.display = 'block';
+
+        openClose.src = "Svg/nav/menu.svg"
+
+        dynamic.classList.remove('extended');
+
+        dynamic.classList.add('hide');
+
+        isOpen = false;
     }
+
 }
 
-document.getElementById('open').addEventListener('click', dynamicMenu);
-document.getElementById('close').addEventListener('click', dynamicMenu);
+document.getElementById('openClose').addEventListener('click', dynamicMenu);
