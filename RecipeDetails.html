@@ -15,47 +15,48 @@
 </head>
 
 <body>
-    <nav class="nav">
-        <span></span>
-        <img src="Imagenes/nav/Foodieland..png" alt="Foodieland" class="brandlogo">
+    <header>
+        <nav class="nav">
+            <img src="Imagenes/nav/Foodieland..png" alt="Foodieland" class="brandlogo">
 
-        <nav class="menu">
-            <ul>
-                <a class="navbtn" href="Home.html">Home</a>
-                <a class="navbtn">Recipies</a>
-                <a class="navbtn">Blog</a>
-                <a class="navbtn">Contact</a>
-                <a class="navbtn">About us</a>
-            </ul>
+            <div class="menu">
+                <ul>
+                    <a class="navbtn">Home</a>
+                    <a href="RecipeDetails.html" class="navbtn">Recipies</a>
+                    <a class="navbtn">Blog</a>
+                    <a class="navbtn">Contact</a>
+                    <a class="navbtn">About us</a>
+                </ul>
+            </div>
+
+            <div class="social">
+                <img src="Svg/social/facebook.svg" alt="Facebook" class="socialimg">
+                <img src="Svg/social/twitter.svg" alt="Twitter" class="socialimg">
+                <img src="Svg/social/instagram.svg" alt="Instagram" class="socialimg">
+            </div>
+            <img src="Svg/nav/menu.svg" alt="" class="minimized" id="openClose">
+
         </nav>
 
-        <div class="social">
-            <img src="Svg/social/facebook.svg" alt="Facebook" class="socialimg">
-            <img src="Svg/social/twitter.svg" alt="Twitter" class="socialimg">
-            <img src="Svg/social/instagram.svg" alt="Instagram" class="socialimg">
-        </div>
-        <!-- <img src="Svg/nav/menu.svg" alt="" class="minimized" id="closed"> -->
-        <img src="Svg/nav/closingX.svg" alt="" class="minimized" id="open">
-    </nav>
+        <hr class=" navHr">
 
-    <hr class="navHr">
-
-    <nav class="extended">
-        <nav class="menu">
-            <ul>
-                <a class="navbtn">Home</a>
-                <a class="navbtn">Recipies</a>
-                <a class="navbtn">Blog</a>
-                <a class="navbtn">Contact</a>
-                <a class="navbtn">About us</a>
-            </ul>
-        </nav>
-        <div class="social">
-            <img src="Svg/social/facebook.svg" alt="Facebook" class="socialimg">
-            <img src="Svg/social/twitter.svg" alt="Twitter" class="socialimg">
-            <img src="Svg/social/instagram.svg" alt="Instagram" class="socialimg">
+        <div class="extended hide" id="dynamic">
+            <div class="menu">
+                <ul>
+                    <a class="navbtn">Home</a>
+                    <a class="navbtn">Recipies</a>
+                    <a class="navbtn">Blog</a>
+                    <a class="navbtn">Contact</a>
+                    <a class="navbtn">About us</a>
+                </ul>
+            </div>
+            <div class="social">
+                <img src="Svg/social/facebook.svg" alt="Facebook" class="socialimg">
+                <img src="Svg/social/twitter.svg" alt="Twitter" class="socialimg">
+                <img src="Svg/social/instagram.svg" alt="Instagram" class="socialimg">
+            </div>
         </div>
-    </nav>
+    </header>
 
     <main>
 
@@ -103,18 +104,73 @@
                         <button class="optionsBtn">
                             <img src="Imagenes/header/Group 900.png" alt="">
                         </button>
-                        <p></p>
+                        <p>PRINT</p>
                     </span>
                     <span>
                         <button class="optionsBtn">
                             <img src="Imagenes/header/Group 901.png" alt="">
                         </button>
-                        <p></p>
+                        <p>SHARE</p>
                     </span>
                 </div>
             </div>
         </section>
 
+
+
+        <section class="inbox">
+            <p class="h7">Deliciousness to your inbox</p>
+            <p class="inboxText">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor<br>
+                incididunt ut labore et dolore magna aliqut enim ad minim </p>
+            <hr>
+            <form action="" class="inboxForm">
+                <input type="email" class="inboxInput" placeholder="Your email address...">
+                <button class="btn">Subscribe</button>
+            </form>
+            <img src="Imagenes/inbox/left.png" alt="" class="hiddenMobile inboxImgLeft">
+            <img src="Imagenes/inbox/right.png" alt="" class="hiddenMobile inboxImgRight">
+        </section>
+        <section class="recipesGrid">
+            <h6> You may like these recipe too </h6>
+            <div class="dailyGrid">
+                <article class="dailyBox">
+                    <img src="Imagenes/dailyRecipes/1.png" alt="" class="dailyImg">
+                    <img src="Svg/Guardados/marcado.svg" alt="" class="dailySaves">
+                    <p>Mixed Tropical Fruit Salad with Superfood Boosts</p>
+                    <div class="dailyDetails">
+                        <span><img src="Svg/icons/timer.svg" alt="" class="dailyIcons">30 Minutes</span>
+                        <span><img src="Svg/icons/forknife.svg" alt="" class="dailyIcons">Healthy</span>
+                    </div>
+                </article>
+                <article class="dailyBox">
+                    <img src="Imagenes/dailyRecipes/2.png" alt="" class="dailyImg">
+                    <img src="Svg/Guardados/nomarcado.svg" alt="" class="dailySaves">
+                    <p>Big and Juicy Wagyu Beef Cheeseburger</p>
+                    <div class="dailyDetails">
+                        <span><img src="Svg/icons/timer.svg" alt="" class="dailyIcons">30 Minutes</span>
+                        <span><img src="Svg/icons/forknife.svg" alt="" class="dailyIcons">Western</span>
+                    </div>
+                </article>
+                <article class="dailyBox">
+                    <img src="Imagenes/dailyRecipes/3.png" alt="" class="dailyImg">
+                    <img src="Svg/Guardados/marcado.svg" alt="" class="dailySaves">
+                    <p>Healthy Japanese Fried Rice with Asparagus</p>
+                    <div class="dailyDetails">
+                        <span><img src="Svg/icons/timer.svg" alt="" class="dailyIcons">30 Minutes</span>
+                        <span><img src="Svg/icons/forknife.svg" alt="" class="dailyIcons">Healthy</span>
+                    </div>
+                </article>
+                <article class="dailyBox">
+                    <img src="Imagenes/dailyRecipes/4.png" alt="" class="dailyImg">
+                    <img src="Svg/Guardados/nomarcado.svg" alt="" class="dailySaves">
+                    <p>Cauliflower Walnut Vegetarian Taco Meats</p>
+                    <div class="dailyDetails">
+                        <span><img src="Svg/icons/timer.svg" alt="" class="dailyIcons">30 Minutes</span>
+                        <span><img src="Svg/icons/forknife.svg" alt="" class="dailyIcons">Eastern</span>
+                    </div>
+                </article>
+            </div>
+        </section>
 
     </main>
 
@@ -146,7 +202,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="app.js" defer></script>
 </body>
 
 </html>

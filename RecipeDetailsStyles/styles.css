@@ -104,10 +104,47 @@ h1 {
 .options {
     width: 15%;
     display: flex;
+    gap: 32px;
+    align-items: center;
+    align-content: center;
+    align-self: center;
 
+}
+
+.optionsBtn {
+    background-color: transparent;
+    border: none;
 }
 
 .optionsBtn img {
     width: 80px;
     height: auto;
+}
+
+.optionsBtn span p {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+}
+
+.optionsBtn span {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+h6 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 36px;
+}
+
+.recipesGrid {
+    margin-top: 100px;
 }
