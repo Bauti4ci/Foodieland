@@ -513,7 +513,7 @@ h5 {
     display: none;
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1024px) {
 
     .hidden {
         display: flex;
