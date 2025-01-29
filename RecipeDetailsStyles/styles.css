@@ -1,7 +1,6 @@
 .header {
     display: flex;
     margin-top: 80px;
-    justify-content: space-between;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
@@ -9,9 +8,9 @@
 
 .title {
     display: flex;
-    flex-direction: column;
     gap: 53px;
     width: 80%;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -261,10 +260,35 @@ h3 {
     flex-direction: column;
 }
 
+.ing {
+    flex-direction: column;
+}
+
+.ing ul {
+    margin-top: 33px;
+}
+
+.ing span {
+    padding: 10px 0;
+}
+
+.ing p {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+}
 
 .check {
     border-radius: 100%;
-    border: 2px solid rgba(219, 226, 229, 1)
+    border: 2px solid rgba(219, 226, 229, 1);
+    border-radius: 100%;
+}
+
+.ing label {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    margin-left: 24px;
 }
 
 .otherRecipes {

@@ -128,7 +128,12 @@ h2 {
     background-color: rgba(231, 250, 254, 1);
     font-size: 1rem;
     font-weight: 600;
+    transition: all 0.5s ease-in-out;
+}
 
+.topCateg button:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.041);
 }
 
 .footerCateg {
