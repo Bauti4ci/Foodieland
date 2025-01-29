@@ -140,6 +140,12 @@ h2 {
     width: 100%;
 }
 
+.footerCateg :hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.041);
+}
+
+
 .footerCateg span {
     display: flex;
     justify-content: center;
@@ -153,6 +159,12 @@ h2 {
     font-weight: 600;
     color: black;
     font-size: 1.125rem;
+    transition: ease-in-out 0.5s;
+
+}
+
+.footerCateg p {
+    pointer-events: none;
 }
 
 .categoriesPhoto {
@@ -162,6 +174,7 @@ h2 {
     left: 22.22%;
     top: -26%;
     box-shadow: 10px;
+    pointer-events: none;
 }
 
 .shadow {
@@ -250,6 +263,12 @@ h3 {
     padding: 16px 16px 32px 16px;
     border: 0px solid rgba(0, 0, 0, 0);
     border-radius: 30px;
+    transition: ease-in-out 0.5s;
+}
+
+.recipesGrid :hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.041);
 }
 
 .gridPhoto {
@@ -257,6 +276,7 @@ h3 {
     height: auto;
     border: 0px solid rgba(0, 0, 0, 0);
     border-radius: 25px;
+    pointer-events: none;
 }
 
 .saves {
@@ -265,12 +285,18 @@ h3 {
     height: auto;
     right: 8.5%;
     top: 8%;
+    pointer-events: none;
 }
 
-.recipesBox p {
+.recipesBox a {
     font-size: 1.5rem;
     font-weight: 600;
     margin-left: 8px;
+}
+
+.recipesBox a:hover {
+    transform: none;
+    box-shadow: none
 }
 
 .recipesDetails {
@@ -279,6 +305,7 @@ h3 {
     align-items: start;
     justify-content: flex-start;
     gap: 16px;
+    pointer-events: none;
 }
 
 .recipesDetails span {
@@ -300,6 +327,7 @@ h3 {
     max-width: 400px;
     width: auto;
     height: auto;
+    pointer-events: none;
 }
 
 
@@ -343,6 +371,7 @@ h4 {
 
 .posts {
     display: flex;
+    max-width: 1350px;
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
@@ -380,6 +409,11 @@ h5 {
     flex-wrap: wrap;
 }
 
+.postFlex :hover {
+    transform: scale(1.125);
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.041);
+}
+
 .postBox {
     display: flex;
     flex-direction: column;
@@ -387,6 +421,7 @@ h5 {
     max-height: 445.44px;
     background-color: rgba(255, 255, 255, 1);
     position: relative;
+    transition: ease-in-out 0.6s;
 }
 
 .postHeader {
@@ -398,6 +433,7 @@ h5 {
     padding-top: 8.51px;
     padding-bottom: 8.51px;
     padding-right: 11.6px;
+    pointer-events: none;
 }
 
 .postHeaderLeft {
@@ -448,12 +484,14 @@ h5 {
     width: 100%;
     height: auto;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .photoNum {
     position: absolute;
     top: 12.5%;
     right: 4%;
+    pointer-events: none;
 }
 
 .postFoot {
@@ -464,6 +502,7 @@ h5 {
     padding-left: 10.83px;
     padding-right: 9.81px;
     gap: 8px;
+    pointer-events: none;
 }
 
 .interaction {

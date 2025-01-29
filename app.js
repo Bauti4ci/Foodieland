@@ -9,18 +9,18 @@ function dynamicMenu() {
 
         openClose.src = "Svg/nav/closingX.svg";
 
-        dynamic.classList.remove('hide');
+        dynamic.classList.add('view');
 
-        dynamic.classList.add('extended');
+        dynamic.classList.remove('hide');
 
         isOpen = true;
     } else {
 
         openClose.src = "Svg/nav/menu.svg"
 
-        dynamic.classList.remove('extended');
-
         dynamic.classList.add('hide');
+
+        dynamic.classList.remove('view');
 
         isOpen = false;
     }

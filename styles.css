@@ -16,10 +16,6 @@ section {
     margin: 0 auto;
 }
 
-.hide {
-    display: none;
-}
-
 .extended {
     display: none;
 }
@@ -45,6 +41,15 @@ body {
     color: white;
     border-radius: 15px;
     gap: 10px;
+    transition: ease-in-out 0.5s;
+}
+
+.btn:hover {
+    transform: scale(1.01);
+    -webkit-box-shadow: 0px 0px 86px 20px rgba(159, 211, 235, 0.71);
+    -moz-box-shadow: 0px 0px 86px 20px rgba(159, 211, 235, 0.71);
+    box-shadow: 0px 0px 86px 20px rgba(159, 211, 235, 0.71);
+    text-shadow: 2px 2px 16px rgb(255, 255, 255);
 }
 
 .author {
@@ -76,22 +81,39 @@ body {
     justify-content: space-between;
 }
 
+.menu a:hover {
+    transform: scale(1.05);
+    border-bottom: 1px solid black;
+
+}
+
 .menu a {
     text-decoration: none;
     color: black;
     font-size: 1rem;
     font-weight: 500;
+    transition: ease-in-out 0.35s;
+    padding-bottom: 1px;
+
 }
 
 .social {
     display: flex;
     justify-content: space-between;
     gap: 1.5rem;
+
 }
+
 
 .socialimg {
     max-width: 17px;
     max-height: 17px;
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+}
+
+.social :hover {
+    transform: scale(1.1);
 }
 
 ul {
@@ -113,10 +135,10 @@ header {
 .nav {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    padding: 40px 1px;
     background-color: white;
     position: relative;
+    max-height: 100px;
 }
 
 .nav .brandlogo {
@@ -149,7 +171,8 @@ footer {
 }
 
 .footer {
-    width: 75%;
+    max-width: 1300px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -307,6 +330,12 @@ h6 {
     flex-wrap: wrap;
     gap: 40px;
     margin-top: 80px;
+    transition: ease-in-out 0.5s;
+}
+
+.dailyGrid :hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.041);
 }
 
 .dailyBox {
@@ -318,12 +347,17 @@ h6 {
     justify-content: space-between;
     gap: 16px;
     position: relative;
+    padding: 8px 8px;
+    border-radius: 30px;
+    padding: 8px 8px 16px 8px;
+    transition: ease-in-out 0.5s;
 }
 
 .dailyImg {
     width: 100%;
     height: 200px;
     border-radius: 25px;
+    pointer-events: none;
 }
 
 .dailySaves {
@@ -332,17 +366,24 @@ h6 {
     position: absolute;
     top: 5%;
     right: 5%;
+    pointer-events: none;
 }
 
-.dailyBox p {
+.dailyBox a {
     font-size: 1.125rem;
     font-weight: 600;
+}
+
+.dailyBox a:hover {
+    transform: none;
+    box-shadow: none
 }
 
 .dailyDetails {
     display: flex;
     justify-content: flex-start;
     gap: 24px;
+    pointer-events: none;
 }
 
 .dailyDetails span {
@@ -376,9 +417,31 @@ h6 {
         align-items: center;
         align-content: center;
         background: linear-gradient(180deg, rgba(112, 130, 70, 0) 0%, rgba(112, 130, 70, 0.1) 100%);
-        z-index: 5;
-
+        background-color: white;
+        z-index: -5;
+        position: absolute;
+        top: -140%;
     }
+
+    .view {
+        top: -140%;
+        animation-name: effect;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+        transition: ease-in;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes effect {
+        from {
+            top: -140%;
+        }
+
+        to {
+            top: 100%;
+        }
+    }
+
 
     .extended .menu ul {
         flex-direction: column;
@@ -388,7 +451,22 @@ h6 {
     }
 
     .hide {
-        display: none;
+        top: 100%;
+        animation-name: closeEffect;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+        transition: ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes closeEffect {
+        from {
+            top: 100%;
+        }
+
+        to {
+            top: -140%;
+        }
     }
 
     .nav {
@@ -416,7 +494,7 @@ h6 {
         display: inline-block;
         width: 32px;
         position: absolute;
-        top: -40%;
+        top: 32.5%;
         right: 5%;
     }
 
