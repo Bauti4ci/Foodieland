@@ -49,6 +49,7 @@
 .firstbtn p {
     color: black;
     font-size: 1rem;
+    text-align: center;
 }
 
 h1 {
@@ -98,6 +99,30 @@ h1 {
 
 .mobileStart {
     display: none;
+}
+
+.mobileDetails {
+    display: flex;
+    margin-left: 8px;
+    align-items: start;
+    justify-content: flex-start;
+    gap: 16px;
+    pointer-events: none;
+}
+
+.mobileDetails span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    height: 40px;
+    text-align: start;
+}
+
+.mobileIcons {
+    width: 1.6rem;
+    height: auto;
 }
 
 
