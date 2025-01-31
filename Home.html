@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="HomeStyles/styles.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/homeStyles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,13 +15,13 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <nav class="nav">
             <img src="Imagenes/nav/Foodieland..png" alt="Foodieland" class="brandlogo">
 
             <div class="menu">
                 <ul>
-                    <a href="Home.html" class="navbtn">Home</a>
+                    <a href="#start" class="navbtn">Home</a>
                     <a href="#recipes" class="navbtn">Recipies</a>
                     <a href="#posts" class="navbtn">Blog</a>
                     <a href="#inbox" class="navbtn">Contact</a>
@@ -35,7 +35,10 @@
                 <img src="Svg/social/instagram.svg" alt="Instagram" class="socialimg">
             </div>
             <img src="Svg/nav/menu.svg" alt="" class="minimized" id="openClose">
-
+            <button class="langToggle">
+                <img src="Svg/nav/toggle.svg" alt="">
+                <p>EN</p>
+            </button>
         </nav>
 
         <hr class=" navHr">
@@ -59,7 +62,7 @@
     </header>
     <main>
 
-        <section class="hiddenMobile start">
+        <section class="hiddenMobile start" id="start">
             <div class="leftstart">
                 <span class="firstbtn">
                     <img src="Imagenes/start/pergamino.png" alt="">
@@ -461,14 +464,14 @@
             </section>
         </div>
 
-        <section class="dailyRecipes">
-            <div class="dailyTop">
+        <section class="otherRecipes">
+            <div class="otherRecipesTop">
                 <h6>Try this delicious recipe<br>to make your day</h6>
                 <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor<br>
                     incididunt ut labore et dolore magna aliqut enim ad minim </p>
             </div>
-            <div class="dailyGrid">
-                <article class="dailyBox">
+            <div class="otherRecipesGrid">
+                <article class="otherRecipesBox">
                     <img src="Imagenes/dailyRecipes/1.png" alt="" class="dailyImg">
                     <img src="Svg/Guardados/marcado.svg" alt="" class="dailySaves">
                     <a href="RecipeDetails.html">Mixed Tropical Fruit Salad with Superfood Boosts </a>
@@ -481,7 +484,7 @@
                         </span>
                     </div>
                 </article>
-                <article class="dailyBox">
+                <article class="otherRecipesBox">
                     <img src="Imagenes/dailyRecipes/2.png" alt="" class="dailyImg">
                     <img src="Svg/Guardados/nomarcado.svg" alt="" class="dailySaves">
                     <a href="RecipeDetails.html">Big and Juicy Wagyu Beef</a>
@@ -494,7 +497,7 @@
                         </span>
                     </div>
                 </article>
-                <article class="dailyBox">
+                <article class="otherRecipesBox">
                     <img src="Imagenes/dailyRecipes/3.png" alt="" class="dailyImg">
                     <img src="Svg/Guardados/marcado.svg" alt="" class="dailySaves">
                     <a href="RecipeDetails.html">Healthy Japanese Fried Rice with Asparagus </a>
@@ -507,7 +510,7 @@
                         </span>
                     </div>
                 </article>
-                <article class="dailyBox">
+                <article class="otherRecipesBox">
                     <img src="Imagenes/dailyRecipes/4.png" alt="" class="dailyImg">
                     <img src="Svg/Guardados/nomarcado.svg" alt="" class="dailySaves">
                     <a href="RecipeDetails.html">Cauliflower and Walnut Vegetarian Tacos </a>
@@ -520,7 +523,7 @@
                         </span>
                     </div>
                 </article>
-                <div class="dailyBox">
+                <div class="otherRecipesBox">
                     <img src="Imagenes/dailyRecipes/5.png" alt="" class="dailyImg">
                     <img src="Svg/Guardados/marcado.svg" alt="" class="dailySaves">
                     <a href="RecipeDetails.html">Rainbow Chicken Salad with Almond Honey Mustard Dressing </a>
@@ -533,7 +536,7 @@
                         </span>
                     </div>
                 </div>
-                <article class="dailyBox">
+                <article class="otherRecipesBox">
                     <img src="Imagenes/dailyRecipes/6.png" alt="" class="dailyImg">
                     <img src="Svg/Guardados/nomarcado.svg" alt="" class="dailySaves">
                     <a href="RecipeDetails.html">Barbeque Spicy Sandwiches with Chips </a>
@@ -546,7 +549,7 @@
                         </span>
                     </div>
                 </article>
-                <article class="dailyBox">
+                <article class="otherRecipesBox">
                     <img src="Imagenes/dailyRecipes/7.png" alt="" class="dailyImg">
                     <img src="Svg/Guardados/nomarcado.svg" alt="" class="dailySaves">
                     <a href="RecipeDetails.html">Firecracker Vegan Lettuce Wraps - Spicy! </a>
@@ -559,7 +562,7 @@
                         </span>
                     </div>
                 </article>
-                <article class="dailyBox">
+                <article class="otherRecipesBox">
                     <img src="Imagenes/dailyRecipes/8.png" alt="" class="dailyImg">
                     <img src="Svg/Guardados/marcado.svg" alt="" class="dailySaves">
                     <a href="RecipeDetails.html">Chicken Ramen Soup with Mushroom </a>
@@ -612,7 +615,7 @@
             <hr class="footerHr">
             <div class="bottomFooter">
                 <span></span>
-                <p>© 2020 Flowbase. Powered by <a href="">Webflow</a></p>
+                <p>© 2020 Flowbase. Powered by <a href="">BautiFlow</a></p>
                 <div class="social">
                     <img src="Svg/social/facebook.svg" alt="Facebook" class="socialimg">
                     <img src="Svg/social/twitter.svg" alt="Twitter" class="socialimg">
@@ -622,7 +625,9 @@
         </div>
     </footer>
 
-    <script src="app.js" defer></script>
+    <script src="JS/app.js" defer></script>
+    <script src="JS/langToggle.js" defer></script>
+
 </body>
 
 </html>

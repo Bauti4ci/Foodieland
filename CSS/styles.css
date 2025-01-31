@@ -7,6 +7,10 @@
     font-style: normal;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 main {
     margin-top: 148px;
 }
@@ -114,6 +118,46 @@ body {
 
 .social :hover {
     transform: scale(1.1);
+}
+
+.langToggle {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    background-color: rgba(231, 250, 254, 1);
+    border: 0px solid;
+    border-radius: 10px;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+    overflow: hidden;
+    padding: 5px;
+    gap: 5px;
+    top: 120%;
+    left: 1%;
+}
+
+.langToggle:hover {
+    width: 70px;
+    cursor: pointer;
+
+}
+
+
+.langToggle img {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+
+.langToggle p:hover {
+    display: inline-block;
 }
 
 ul {
@@ -302,13 +346,13 @@ footer {
     right: 0px;
 }
 
-.dailyRecipes {
+.otherRecipes {
     display: flex;
     flex-direction: column;
     margin-top: 160px;
 }
 
-.dailyTop {
+.otherRecipesTop {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -324,7 +368,7 @@ h6 {
     font-weight: 400;
 }
 
-.dailyGrid {
+.otherRecipesGrid {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -333,12 +377,12 @@ h6 {
     transition: ease-in-out 0.5s;
 }
 
-.dailyGrid :hover {
+.otherRecipesGrid :hover {
     transform: scale(1.05);
     box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.041);
 }
 
-.dailyBox {
+.otherRecipesBox {
     width: auto;
     max-width: 290px;
     height: auto;
@@ -369,12 +413,12 @@ h6 {
     pointer-events: none;
 }
 
-.dailyBox a {
+.otherRecipesBox a {
     font-size: 1.125rem;
     font-weight: 600;
 }
 
-.dailyBox a:hover {
+.otherRecipesBox a:hover {
     transform: none;
     box-shadow: none
 }
@@ -605,11 +649,8 @@ h6 {
         z-index: 100;
     }
 
-    .dailyRecipesSection {
-        margin-top: 100px;
-    }
 
-    .dailyRecipes {
+    .otherRecipes {
         width: 90%;
     }
 
