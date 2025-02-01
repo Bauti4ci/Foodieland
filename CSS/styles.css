@@ -443,6 +443,14 @@ h6 {
     font-weight: 500;
 }
 
+.dailyDetails p {
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
 .dailyIcons {
     width: 16px;
     height: auto;
@@ -548,6 +556,15 @@ h6 {
 
     .topFooter ul {
         justify-content: space-between;
+    }
+
+    .otherRecipesTop {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
     }
 
 }

@@ -1,61 +1,55 @@
 const toggle = document.querySelector('.langToggle')
 const toggleText = document.querySelector('.langToggle p')
 const navMenu = document.querySelectorAll('.nav .navbtn');
-const navMenuOriginalValue = navMenu.innerText
+const arrayNavMenuEn = ['Home','Recipes','Blog','Contact','About us',]
 const arrayNavMenuEs = ['Inicio','Recetas','Blog','Contacto','Acerca nuestro',]
 const footerMenu = document.querySelectorAll('.footer .navbtn');
-const footerMenuOriginalValue = footerMenu.innerText
+const arrayFooterMenuEn = ['Recipes','Blog','Contact','About us',]
 const arrayFooterMenuEs = ['Recetas','Blog','Contacto','Acerca nuestro',]
 const h1 = document.querySelectorAll('h1');
-const h1OriginalValue = h1.innerText
 const labels = document.querySelectorAll('.labels p');
-const labelsOriginalValue = labels.innerText
+const arrayEnLabels = ['30 minutes','Chiken',]
 const arrayEsLabels = ['30 minutos','Pollo',]
 const details = document.querySelectorAll('.mobileDetails p');
 const detailsOriginalValue = details.innerText
 const topLabel = document.querySelectorAll('.firstbtn p');
-const topLabelOriginalValue = topLabel.innerText
 const btns = document.querySelectorAll('.btn p');
-const btnsOriginalValue = btns.innerText
-const arrayEsBtns = ['Ver receta','Conocer más','Conocer más','Visita nuestro Instagram','Suscribirse',]
+const arrayEnBtns = ['View Recipe','Learn More','Learn More','Visit Our Instagram','Subscribe',]
+const arrayEsBtns = ['Ver Receta','Conocer Más','Conocer Más','Visita Nuestro Instagram','Suscribirse',]
 const dates = document.querySelectorAll('.date');
-const datesOriginalValue = dates.innerText
 const h2 = document.querySelector('h2');
 const h2OriginalValue = h2.innerText
 const categBtn = document.querySelector('.topCateg button');
 const categBtnOriginalValue = categBtn.innerText
 const categ = document.querySelectorAll('.footerCateg p');
-const categOriginalValue = categ.innerText
+const arrayEnCateg = ['Breakfats','Vegan','Meat','Dessert','Lunch','Chocolate',]
 const arrayEsCateg = ['Desayuno','Vegano','Carne','Postres','Almuerzo','Chocolate',]
 const h3 = document.querySelector('h3');
 const h3OriginalValue = h3.innerText
 const recipeNames = document.querySelectorAll('.recipesBox a');
-const recipeNamesOriginalValue = recipeNames.innerText
+const arrayEnRecipes = ['Big and Juicy Wagyu Beef Cheeseburger','Fresh Lime Roasted Salmon with Ginger Sauce','Strawberry Oatmeal Pancake with Honey Syrup','Fresh and Healthy Mixed Mayonnaise Salad ','Chicken Meatballs with Cream Cheese','Fruity Pancake with Orange & Blueberry','The Best Easy One Pot Chicken and Rice','The Creamiest Chicken and Bacon Pasta',]
 const arrayEsRecipes = ['Grande y deliciosa hamburguesa con queso','Salmón asado a la lima fresca con salsa de jengibre','Panqueque de avena y fresa con jarabe de miel','Ensalada de mayonesa mixta fresca y saludable','Albóndigas de pollo con queso crema','Panqueque afrutado con naranja y arándanos','El mejor arroz con pollo fácil en una olla','La pasta de pollo y tocino más cremosa',]
 const recipeDetails = document.querySelectorAll('.recipesBox p');
-const recipeDetailsOriginalValue = recipeDetails.innerText
-const esRecipesDetails = ['30 minutos','Snack','30 minutos','Pescado','30 minutos','Desayuno','30 minutos','Saludable','30 minutos','Carne','30 minutos','Dulce','30 minutos','Snack','30 minutos','Pastas',]
+const enRecipesDetails = ['30 Minutes','Snack','30 Minutes','Fish','30 Minutes','Breakfast','30 Minutes','Healthy','30 Minutes','Meat','30 Minutes','Sweet','30 Minutes','Snack','30 Minutes','Noodles',]
+const esRecipesDetails = ['30 Minutos','Snack','30 Minutos','Pescado','30 Minutos','Desayuno','30 Minutos','Saludable','30 Minutos','Carne','30 Minutos','Dulce','30 Minutos','Snack','30 Minutos','Pastas',]
 const h4 = document.querySelector('h4');
 const h4OriginalValue = h4.innerText
 const h5 = document.querySelector('h5');
 const h5OriginalValue = h5.innerText
 const postLocation = document.querySelectorAll('.postLocation');
-const postLocationOriginalValue = postLocation.innerText
 const postDate = document.querySelectorAll('.postDate');
-const postDateOriginalValue = postDate.innerText
 const postLikes = document.querySelectorAll('.likes p');
-const postLikesOriginalValue = postLikes.innerHTML
 const postCaption = document.querySelectorAll('.caption');
-const postCaptionOriginalValue = postCaption.innerHTML
-const esCaptions = ['<p><b>Foodieland.</b> Los platos de verduras deben tener cierta vitamina para esas personas</p > ','<p><b>Foodieland.</b> La comida dulce puede hacer feliz a alguien, siempre y cuando no coma demasiado</p > ','<p><b>Foodieland.</b> ¿Qué estás haciendo antes de empezar a cocinar? ¿Preparar las herramientas o los ingredientes?</p > ','<p><b>Foodieland.</b> El bistec nunca está mal, es adecuada para ti que quieres una cena romántica</p > ',]
+const enCaptions = ['<p class="caption"><b>Foodieland.</b> The vegetables dishes need to have certain vitamin for those people</p> ','<p class="caption"><b>Foodieland.</b> Sweet food can bring someon into happiness as long as they don’t eat to much</p> ','<p class="caption"><b>Foodieland.</b> What are you doing before start cooking? prepare the tools or ingredients?</p>','<p class="caption"><b>Foodieland.</b> Steak is never wrong, it’s suitable for you who want romantic dinner</p>',]
+const esCaptions = ['<p class="caption"><b>Foodieland.</b> Los platos de verduras deben tener cierta vitamina para esas personas</p> ','<p class="caption"><b>Foodieland.</b> La comida dulce puede hacer feliz a alguien, siempre y cuando no coma demasiado</p> ','<p class="caption"><b>Foodieland.</b> ¿Qué estás haciendo antes de empezar a cocinar? ¿Preparar las herramientas o los ingredientes?</p> ','<p class="caption"><b>Foodieland.</b> El bistec nunca está mal, es adecuada para ti que quieres una cena romántica</p> ',]
 const h6 = document.querySelector('h6');
-const h6OriginalValue = h6.innerText
+const h6OriginalValue = h6.innerHTML
 const otherRecipes = document.querySelectorAll('.otherRecipesBox a');
-const otherRecipesOriginalValue = otherRecipes.innerText
+const enOtherRecipes = ['Mixed Tropical Fruit Salad with Superfood Boosts','Big and Juicy Wagyu Beef','Healthy Japanese Fried Rice with Asparagus','Cauliflower and Walnut Vegetarian Tacos','Rainbow Chicken Salad with Almond Honey Mustard Dressing','Barbeque Spicy Sandwiches with Chips','Firecracker Vegan Lettuce Wraps - Spicy!','Chicken Ramen Soup with Mushroom',]
 const esOtherRecipes = ['Ensalada mixta de frutas tropicales con suplementos','Carne de wagyu grande y jugosa','Arroz frito japonés saludable con espárragos','Tacos vegetarianos de coliflor y nueces','Ensalada de pollo arcoíris con aderezo de almendras, miel y mostaza','Sándwiches picantes a la barbacoa con papas fritas','Wraps de lechuga veganos - ¡Picante!','Sopa Ramen de pollo con champiñones',]
 const otherDetails = document.querySelectorAll('.dailyDetails p');
-const otherDetailsOriginalValue = otherDetails.innerText
-const esOtherDetails = ['30 minutos','Saludable','30 minutos','Occidental','30 minutos','Saludable','30 minutos','Oriental','30 minutos','Saludable','30 minutos','Snack','30 minutos','Mariscos','30 minutos','Japonés',]
+const enOtherDetails = ['30 Minutes','Healthy','30 Minutes','Western','30 Minutes','Healthy','30 Minutes','Eastern','30 Minutes','Healthy','30 Minutes','Snack','30 Minutes','Seafood','30 Minutes','Japanese',]
+const esOtherDetails = ['30 Minutos','Saludable','30 Minutos','Occidental','30 Minutos','Saludable','30 Minutos','Oriental','30 Minutos','Saludable','30 Minutos','Snack','30 Minutos','Mariscos','30 Minutos','Japonés',]
 const input = document.querySelector(".inboxInput");
 const inputOriginalValue = input.placeholder
 const h7 = document.querySelector('.h7');
@@ -130,7 +124,7 @@ function setLang() {
         postCaption.forEach((caption, index) => {
             caption.innerHTML = esCaptions[index];
         })
-        h6.innerHTML = "Prueba esta deliciosa receta para alegrar tu día";
+        h6.innerHTML = "<h6>Prueba esta deliciosa receta <br> para alegrar tu día</h6>";
         otherRecipes.forEach((recipe, index) => {
             recipe.innerText = esOtherRecipes[index];
         })
@@ -141,29 +135,66 @@ function setLang() {
         input.placeholder = "Tu dirección de email..."
     } else {
         toggleText.innerText = "EN"
-        navMenu.innerText = navMenuOriginalValue
-        footerMenu.innerText = footerMenuOriginalValue
-        h1.innerText = h1OriginalValue
-        labels.innerText = labelsOriginalValue
-        details.innerText = detailsOriginalValue
-        topLabel.innerText = topLabelOriginalValue
-        btns.innerText = btnsOriginalValue
-        dates.innerText = datesOriginalValue
+        navMenu.forEach((nav, index) => {
+            nav.innerText = arrayNavMenuEn[index];
+        })
+        footerMenu.forEach((footer, index) => {
+            footer.innerText = arrayFooterMenuEn[index];
+        })
+        h1.forEach(h1 => {
+            h1.innerText = "Spicy delicious chiken wings ";
+        })
+        labels.forEach((label, index) => {
+            label.innerText = arrayEnLabels[index];
+        })
+        details.forEach((detail, index) => {
+            detail.innerText = arrayEnLabels[index];
+        })        
+        topLabel.forEach(topLabel => {
+            topLabel.innerText = "Hot Recipes"
+        })
+        btns.forEach((btn, index) => {
+            btn.innerText = arrayEnBtns[index];
+        })        
+        dates.forEach(date => {
+            date.innerText = "15 March 2022";
+        })
+        categ.forEach((categ, index) => {
+            categ.innerText = arrayEnCateg[index];
+        })
         h2.innerText = h2OriginalValue
         categBtn.innerText = categBtnOriginalValue
-        categ.innerText = categOriginalValue
+        categ.forEach((categ, index) => {
+            categ.innerText = arrayEnCateg[index];
+        })
         h3.innerText = h3OriginalValue
-        recipeNames.innerText = recipeNamesOriginalValue
-        recipeDetails.innerText = recipeDetailsOriginalValue
+        recipeNames.forEach((recipe, index) => {
+            recipe.innerText = arrayEnRecipes[index];
+        })        
+        recipeDetails.forEach((detail, index) => {
+            detail.innerText = enRecipesDetails[index];
+        })
         h4.innerText = h4OriginalValue
         h5.innerText = h5OriginalValue
-        postLocation.innerText = postLocationOriginalValue
-        postDate.innerText = postDateOriginalValue
-        postLikes.innerHTML = postLikesOriginalValue
-        postCaption.innerHTML = postCaptionOriginalValue
-        h6.innerText = h6OriginalValue
-        otherRecipes.innerText = otherRecipesOriginalValue
-        otherDetails.innerText = otherDetailsOriginalValue
+        postLocation.forEach(location => {
+            location.innerText = "Tokio, Japan";
+        })
+        postDate.forEach(date => {
+            date.innerText = "September 19";
+        })
+        postLikes.forEach(like => {
+            like.innerHTML = "<p>Liked by <b>craig_love</b> and <b>44,686 others</b></p>";
+        })
+        postCaption.forEach((caption, index) => {
+            caption.innerHTML = enCaptions[index];
+        })
+        h6.innerHTML = h6OriginalValue
+        otherRecipes.forEach((recipe, index) => {
+            recipe.innerText = enOtherRecipes[index];
+        })
+        otherDetails.forEach((detail, index) => {
+            detail.innerText = enOtherDetails[index];
+        })
         input.placeholder = inputOriginalValue
         h7.innerText = h7OriginalValue
     }

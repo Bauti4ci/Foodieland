@@ -353,6 +353,14 @@ h3 {
     height: auto;
 }
 
+.recipesDetails p {
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
 .ad {
     max-width: 400px;
     width: auto;
@@ -575,6 +583,8 @@ h5 {
 .postDate {
     font-size: 0.532rem;
     font-weight: 400;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.4);
 }
 
 
