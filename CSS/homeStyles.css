@@ -315,7 +315,7 @@ h3 {
     height: auto;
     right: 8.5%;
     top: 8%;
-    pointer-events: none;
+    transform: none;
 }
 
 .recipesBox a {
