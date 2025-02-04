@@ -1,25 +1,21 @@
 const recipes = document.querySelectorAll('.recipesBox');
 const saved = document.querySelectorAll('.saves');
-const favorites = localStorage.getItem('favorites')
-let arrayRecipes = Array.from(recipes).map(recipe => 0);
+let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-if (!favorites) {
-    localStorage.setItem('favorites', JSON.stringify(arrayRecipes));
+if (favorites.length === 0) {
+    favorites = Array.from(recipes).map(() => 0);
+    localStorage.setItem('favorites', JSON.stringify(favorites));
 } else {
-    Array.from(favorites).forEach((favorite, index) => {
-        console.log(favorites)
-        console.log(recipes)
+    favorites.forEach((favorite, index) => {
         if (favorite === 1) {
             recipes[index].classList.add('favorite');
             saved[index].src = 'Svg/Guardados/marcado.svg';
         }
-    })
+    });
 }
 
-
-
 function toggleFavorites(position) {
-    let savedFavorites = JSON.parse(localStorage.getItem('favorites'));
+    let savedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
     savedFavorites[position] = savedFavorites[position] === 0 ? 1 : 0;
 
