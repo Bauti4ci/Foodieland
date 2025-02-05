@@ -3,7 +3,10 @@
     margin-top: 80px;
     align-items: center;
     align-content: center;
-    flex-wrap: wrap;
+}
+
+.hidden {
+    display: none;
 }
 
 .title {
@@ -14,7 +17,7 @@
 }
 
 h1 {
-    font-size: 5.926vh;
+    font-size: 4rem;
 }
 
 .author {
@@ -33,7 +36,7 @@ h1 {
 }
 
 .date {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.6);
 
@@ -92,6 +95,7 @@ h1 {
 .icons {
     width: 21.24%;
     height: auto;
+    min-width: 20px;
 }
 
 .options {
@@ -102,6 +106,11 @@ h1 {
     align-content: center;
     align-self: center;
 
+}
+
+.buttons {
+    display: flex;
+    gap: 32px;
 }
 
 .optionsBtn {
@@ -115,7 +124,7 @@ h1 {
 }
 
 .interaction p {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.1em;
     text-align: center;
@@ -136,7 +145,7 @@ h1 {
 h6 {
     margin: 0 auto;
     text-align: center;
-    font-size: 36px;
+    font-size: 2.25rem;
 }
 
 .recipePincipal {
@@ -203,26 +212,26 @@ h2 {
 }
 
 .nutDataType {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.6);
 }
 
 .nutDataValue {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
     color: rgba(0, 0, 0, 1);
 }
 
 .nutDescription {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     text-align: center;
 }
 
 .principalDescription {
     margin-top: 80px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 28px;
     text-align: left;
@@ -269,11 +278,11 @@ h3 {
 }
 
 .ing span {
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 .ing p {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     text-align: left;
 }
@@ -285,20 +294,20 @@ h3 {
 }
 
 .ing label {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
     text-align: left;
     margin-left: 24px;
 }
 
-.otherRecipes {
+.otherRecipesInDetails {
     width: 30%;
     display: flex;
     flex-wrap: wrap;
     gap: 80px;
 }
 
-.otherRecipes div {
+.otherRecipesInDetails div {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
@@ -329,14 +338,14 @@ h3 {
 }
 
 .miniRecipesName {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     text-align: left;
     color: rgba(0, 0, 0, 1);
 }
 
 .miniRecipesAuthor {
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: 500;
     text-align: left;
     color: rgba(0, 0, 0, 0.6);
@@ -349,10 +358,235 @@ h3 {
 
 }
 
+.directions {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 15px;
+}
+
+.steps {
+    max-width: 840px;
+}
+
+.steps input {
+    margin-bottom: 24px;
+}
+
+.steps label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 24px;
+}
+
+.steps p {
+    margin-left: 48px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.steps img {
+    margin: 48px 0;
+    margin-left: 48px;
+    width: 95%;
+}
+
+.directions hr {
+    max-width: 840px;
+    border: 1px solid rgba(0, 0, 0, 0.1)
+}
 
 
 
 
 .recipesGrid {
     margin-top: 100px;
+}
+
+
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    section {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .details {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .detailsRight {
+        margin: auto 6px;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .hidden {
+        display: flex;
+    }
+
+    .recipePincipal {
+        width: 90%;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .options {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .principalHeader {
+        justify-content: center;
+        align-content: center;
+    }
+
+    .recipeVid {
+        width: 90%;
+    }
+
+    .nutrition {
+        width: 80%;
+    }
+
+    .nutritionBox {
+        margin-bottom: 24px;
+    }
+
+    .principalDescription {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .ingredients {
+        width: 95%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .otherRecipesInDetails {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .otherRecipesInDetails div {
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .directions {
+        justify-content: center;
+        margin-top: 40px;
+        width: 90%;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .steps {
+        width: 100%;
+    }
+
+    .steps img {
+        width: 85%;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 0.85rem;
+    }
+
+    .date {
+        font-size: 0.7rem;
+    }
+
+    .detailsRight {
+        gap: 15px;
+    }
+
+    .detail {
+        min-width: auto;
+    }
+
+
+    .timeType {
+        font-size: 0.65rem;
+    }
+
+    .time {
+        font-size: 0.75rem;
+    }
+
+    .foodType {
+        font-size: 0.75rem;
+    }
+
+    .buttons {
+        gap: 15px;
+    }
+
+    .optionsBtn img {
+        width: 50px;
+        height: auto;
+    }
+
+    .interaction {
+        gap: 10px;
+    }
+
+    .interaction p {
+        font-size: 0.75rem;
+    }
+
+    .principalDescription {
+        font-size: 0.85rem;
+    }
+
+    .ads {
+        max-width: 350px;
+    }
+
+    .steps label {
+        font-size: 1.3rem;
+    }
+
+    .ing label {
+        font-size: 1rem;
+    }
+
+    .steps p {
+        font-size: 0.9rem;
+    }
 }

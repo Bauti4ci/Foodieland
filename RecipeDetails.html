@@ -15,13 +15,13 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <nav class="nav">
             <img src="Imagenes/nav/Foodieland..png" alt="Foodieland" class="brandlogo">
 
             <div class="menu">
                 <ul>
-                    <a href="Home.html" class="navbtn">Home</a>
+                    <a href="#start" class="navbtn">Home</a>
                     <a href="#recipes" class="navbtn">Recipies</a>
                     <a href="#posts" class="navbtn">Blog</a>
                     <a href="#inbox" class="navbtn">Contact</a>
@@ -35,7 +35,10 @@
                 <img src="Svg/social/instagram.svg" alt="Instagram" class="socialimg">
             </div>
             <img src="Svg/nav/menu.svg" alt="" class="minimized" id="openClose">
-
+            <button class="langToggle">
+                <img src="Svg/nav/toggle.svg" alt="">
+                <p>EN</p>
+            </button>
         </nav>
 
         <hr class=" navHr">
@@ -64,7 +67,7 @@
             <div class="title">
                 <h1>Health Japanese Fried Rice</h1>
                 <div class="details">
-                    <div class="author">
+                    <div class="author hide">
                         <img src="Imagenes/start/fotoJohnSmith.png" alt="">
                         <div class="authorName">
                             <p class="name">John Smith</p>
@@ -72,7 +75,7 @@
                         </div>
                     </div>
                     <div class="detailsRight">
-                        <span class="dividers"></span>
+                        <span class="dividers hide"></span>
                         <div class="detail">
                             <img src="Svg/icons/timer.svg" alt="" class="icons">
                             <div class="detailContext">
@@ -99,18 +102,27 @@
                 </div>
             </div>
             <div class="options">
-                <span class="interaction">
-                    <button class="optionsBtn">
-                        <img src="Imagenes/header/Group 900.png" alt="">
-                    </button>
-                    <p>PRINT</p>
-                </span>
-                <span class="interaction">
-                    <button class="optionsBtn">
-                        <img src="Imagenes/header/Group 901.png" alt="">
-                    </button>
-                    <p>SHARE</p>
-                </span>
+                <div class="author hidden">
+                    <img src="Imagenes/start/fotoJohnSmith.png" alt="">
+                    <div class="authorName">
+                        <p class="name">John Smith</p>
+                        <p class="date">15 March 2022</p>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <span class="interaction">
+                        <button class="optionsBtn">
+                            <img src="Imagenes/header/Group 900.png" alt="">
+                        </button>
+                        <p>PRINT</p>
+                    </span>
+                    <span class="interaction">
+                        <button class="optionsBtn">
+                            <img src="Imagenes/header/Group 901.png" alt="">
+                        </button>
+                        <p>SHARE</p>
+                    </span>
+                </div>
             </div>
         </section>
         </section>
@@ -224,7 +236,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="otherRecipes">
+            <div class="otherRecipesInDetails">
                 <div>
                     <article class="miniRecipes">
                         <img src="Imagenes/recipies/meatballs.png" alt="">
@@ -252,6 +264,48 @@
             </div>
         </section>
 
+        <Section class="directions">
+            <h3>Directions</h3>
+            <article class="steps">
+                <span>
+                    <input type="checkbox" name="" id="check">
+                    <label for="check">1. Lorem ipsum dolor sit amet</label>
+                </span>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                    magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+                    labore et dolore magnam aliquam quaerat voluptatem.</p>
+                <img src="Imagenes/recipeDetailsPage/Rectangle 23.png" alt="">
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                    magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+                    labore et dolore magnam aliquam quaerat voluptatem.</p>
+            </article>
+            <hr>
+            <article class="steps">
+                <span>
+                    <input type="checkbox" name="" id="check">
+                    <label for="check">2. Lorem ipsum dolor sit amet</label>
+                </span>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                    magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+                    labore et dolore magnam aliquam quaerat voluptatem.</p>
+            </article>
+            <hr>
+            <article class="steps">
+                <span>
+                    <input type="checkbox" name="" id="check">
+                    <label for="check">3. Lorem ipsum dolor sit amet</label>
+                </span>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                    magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+                    labore et dolore magnam aliquam quaerat voluptatem.</p>
+            </article>
+            <hr>
+        </Section>
+
 
         <section class="inbox">
             <p class="h7">Deliciousness to your inbox</p>
@@ -267,7 +321,7 @@
         </section>
 
 
-        <section class="recipesGrid">
+        <section class="otherRecipes">
             <h6> You may like these recipe too </h6>
             <div class="otherRecipesGrid">
                 <article class="otherRecipesBox">

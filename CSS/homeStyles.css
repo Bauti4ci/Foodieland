@@ -242,7 +242,7 @@ h2 {
 }
 
 
-.recipes {
+.recipesSec {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -724,11 +724,7 @@ h5 {
     }
 
 
-    .recipesSection {
-        margin-top: 100px;
-    }
-
-    .recipes {
+    .recipesSec {
         width: 90%;
     }
 

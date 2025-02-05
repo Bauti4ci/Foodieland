@@ -1,7 +1,7 @@
-const recipes = document.querySelectorAll('.recipesBox');
-const saved = document.querySelectorAll('.saves');
+const recipes = document.querySelectorAll('.recipes');
+const saved = document.querySelectorAll('.heart');
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
+console.log(saved)
 if (favorites.length === 0) {
     favorites = Array.from(recipes).map(() => 0);
     localStorage.setItem('favorites', JSON.stringify(favorites));
@@ -15,7 +15,7 @@ if (favorites.length === 0) {
 }
 
 function toggleFavorites(position) {
-    let savedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const savedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
     savedFavorites[position] = savedFavorites[position] === 0 ? 1 : 0;
 
