@@ -407,7 +407,7 @@ h3 {
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1030px) {
     .header {
         flex-direction: column;
         width: 90%;
@@ -583,7 +583,7 @@ h3 {
     }
 
     .ing label {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .steps p {

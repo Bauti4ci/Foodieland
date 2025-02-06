@@ -1,7 +1,7 @@
 const recipes = document.querySelectorAll('.recipes');
 const saved = document.querySelectorAll('.heart');
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-console.log(saved)
+console.log(recipes)
 if (favorites.length === 0) {
     favorites = Array.from(recipes).map(() => 0);
     localStorage.setItem('favorites', JSON.stringify(favorites));
