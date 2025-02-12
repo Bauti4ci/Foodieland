@@ -3,56 +3,56 @@
         "id": 9,
         "title": "Big and Juicy Wagyu Beef Cheeseburger",
         "image": "Imagenes/recipies/burger.png",
-        "cookTime": "30 Minutes",
+        "cookingMinutes": "30 Minutes",
         "type": "Snack"
     },
     {
         "id": 10,
         "title": "Fresh Lime Roasted Salmon with Ginger Sauce",
         "image": "Imagenes/recipies/salmon.png",
-        "cookTime": "30 Minutes",
+        "cookingMinutes": "30 Minutes",
         "type": "Fish"
     },
     {
         "id": 11,
         "title": "Strawberry Oatmeal Pancake with Honey Syrup ",
         "image": "Imagenes/recipies/pancakes.png",
-        "cookTime": "30 Minutes",
+        "cookingMinutes": "30 Minutes",
         "type": "Breakfast"
     },
     {
         "id": 12,
         "title": "Chicken Meatballs with Cream Cheese",
         "image": "Imagenes/recipies/meatballs.png",
-        "cookTime": "30 Minutes",
+        "cookingMinutes": "30 Minutes",
         "type": "Meat"
     },
     {
         "id": 13,
         "title": "Fresh and Healthy Mixed Mayonnaise Salad",
         "image": "Imagenes/recipies/salad.png",
-        "cookTime": "30 Minutes",
+        "cookingMinutes": "30 Minutes",
         "type": "Healthy"
     },
     {
         "id": 14,
         "title": "Fruity Pancake with Orange & Blueberry",
         "image": "Imagenes/recipies/fruitpancakes.png",
-        "cookTime": "30 Minutes",
+        "cookingMinutes": "30 Minutes",
         "type": "Sweet"
     },
     {
         "id": 15,
         "title": "The Best Easy One Pot Chicken and Rice",
         "image": "Imagenes/recipies/chickenRice.png",
-        "cookTime": "30 Minutes",
+        "cookingMinutes": "30 Minutes",
         "type": "Snack"
     },
     {
         "id": 16,
         "title": "The Creamiest Chicken and Bacon Pasta",
         "image": "Imagenes/recipies/pasta.png",
-        "cookTime": "30 Minutes",
+        "cookingMinutes": "30 Minutes",
         "type": "Noodles"
     }
 ]

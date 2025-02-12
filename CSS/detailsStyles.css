@@ -1,3 +1,13 @@
+.loadingScreen {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.loadingScreen h1 {
+    font-size: 3rem;
+}
+
 .header {
     display: flex;
     margin-top: 80px;
@@ -177,9 +187,13 @@ h6 {
     position: absolute;
     width: 14.3%;
     height: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 42.5%;
+    transition: all ease-in-out;
+}
+
+.recipeVidIcon:hover {
+    transform: scale(1.1);
 }
 
 .nutrition {

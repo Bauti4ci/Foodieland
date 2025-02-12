@@ -10,19 +10,19 @@ fetch('JSONS/otherRecipes.json')
     .then(otherRecipes => {
         /* Por cada recipe creamos un article (importante guardarlo como string) */
         const otherRecipesArrayArticles = otherRecipes.map(recipe => (
-            `<article class= "otherRecipesBox recipes">
+            `<a href="RecipeDetails.html" class= "otherRecipesBox recipes">
                 <img src="${recipe.image}" alt="" class="dailyImg">
                 <img src="Svg/Guardados/nomarcado.svg" id="${recipe.id}" alt="" class="dailySaves heart">
-                <a href="RecipeDetails.html">${recipe.title}</a>
+                <p class="otherRecipeName">${recipe.title}</p>
                 <div class="dailyDetails">
                     <span><img src="Svg/icons/timer.svg" alt="" class="dailyIcons">
-                        <p>${recipe.cookTime}</p>
+                        <p>${recipe.cookingMinutes}</p>
                     </span>
                     <span><img src="Svg/icons/forknife.svg" alt="" class="dailyIcons">
                         <p>${recipe.type}</p>
                         </span>
                 </div>
-            </article>`
+            </a>`
 
         ));
 

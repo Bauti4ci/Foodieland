@@ -62,26 +62,69 @@
     </header>
     <main>
 
-        <section class="hiddenMobile start" id="start">
-            <!-- <div class="leftstart">
-                <span class="firstbtn">
-                    <img src="Imagenes/start/pergamino.png" alt="">
-                    <p>Hot Recipes</p>
-                </span>
-                <a href="RecipeDetails.html">
-                    <h1 class="homeTranslate">Spicy delicious <br> chiken wings </h1>
-                </a>
-                <p class="subH">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quos iste laboriosam
-                    consequatur
-                    pariatur error obcaecati placeat unde nihil facilis!</p>
-                <div class="labels">
-                    <span class="secondbtn">
-                        <img src="Svg/icons/timer.svg" alt="">
-                        <p>30 Minutes </p>
+        <section id="start">
+            <!-- <div class="hiddenMobile start">
+                <div class="leftstart">
+                    <span class="firstbtn">
+                        <img src="Imagenes/start/pergamino.png" alt="">
+                        <p>Hot Recipes</p>
                     </span>
-                    <span class="secondbtn">
-                        <img src="Svg/icons/forknife.svg" alt="">
-                        <p>Chiken</p>
+                    <a href="RecipeDetails.html">
+                        <h1 class="homeTranslate">Spicy delicious <br> chiken wings </h1>
+                    </a>
+                    <p class="subH">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quos iste laboriosam
+                        consequatur
+                        pariatur error obcaecati placeat unde nihil facilis!</p>
+                    <div class="labels">
+                        <span class="secondbtn">
+                            <img src="Svg/icons/timer.svg" alt="">
+                            <p>30 Minutes </p>
+                        </span>
+                        <span class="secondbtn">
+                            <img src="Svg/icons/forknife.svg" alt="">
+                            <p>Chiken</p>
+                        </span>
+                    </div>
+                    <div class="startFooter">
+                        <div class="author">
+                            <img src="Imagenes/start/fotoJohnSmith.png" alt="">
+                            <div class="authorName">
+                                <p class="name">John Smith</p>
+                                <p class="date">15 March 2022</p>
+                            </div>
+                        </div>
+                        <button class="btn">
+                            <p>View recipies</p> <img src="Svg/icons/play.svg" alt="">
+                        </button>
+                    </div>
+                    <img src="Imagenes/start/Badge.png" alt="" class="badge">
+                </div>
+            </div> -->
+        </section>
+
+        <span class="hidden firstbtn">
+            <img src="Imagenes/start/pergamino.png" alt="">
+            <p>Hot Recipes</p>
+        </span>
+
+        <section id="mobileStart">
+            <!-- <div class="mobileStart">
+                <div class="startImgDiv">
+                    <img src="Imagenes/start/pollomobile.jpeg" alt="Pollo" class="mobileStartImg">
+                    <img src="Imagenes/start/Badge.png" alt="" class="mobileBadge">
+                </div>
+                <h1 class="homeTranslate">Spicy delicious chiken wings</h1>
+                <p class="startContext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quos iste
+                    laboriosam consequatur
+                    pariatur error obcaecati placeat unde nihil facilis!</p>
+                <div class="mobileDetails mobileS">
+                    <span>
+                        <img src="Svg/icons/timer.svg" alt="" class="mobileIcons">
+                        <p>30 Minutes</p>
+                    </span>
+                    <span>
+                        <img src="Svg/icons/forknife.svg" alt="" class="mobileIcons">
+                        <p>Chicken</p>
                     </span>
                 </div>
                 <div class="startFooter">
@@ -95,48 +138,9 @@
                     <button class="btn">
                         <p>View recipies</p> <img src="Svg/icons/play.svg" alt="">
                     </button>
-                </div>
-                <img src="Imagenes/start/Badge.png" alt="" class="badge">
-            </div> -->
-        </section>
+                </div> -->
 
-        <span class="hidden firstbtn">
-            <img src="Imagenes/start/pergamino.png" alt="">
-            <p>Hot Recipes</p>
-        </span>
-
-        <section class="mobileStart">
-            <div class="startImgDiv">
-                <img src="Imagenes/start/pollomobile.jpeg" alt="Pollo" class="mobileStartImg">
-                <img src="Imagenes/start/Badge.png" alt="" class="mobileBadge">
             </div>
-            <h1 class="homeTranslate">Spicy delicious chiken wings</h1>
-            <p class="startContext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quos iste
-                laboriosam consequatur
-                pariatur error obcaecati placeat unde nihil facilis!</p>
-            <div class="mobileDetails mobileS">
-                <span>
-                    <img src="Svg/icons/timer.svg" alt="" class="mobileIcons">
-                    <p>30 Minutes</p>
-                </span>
-                <span>
-                    <img src="Svg/icons/forknife.svg" alt="" class="mobileIcons">
-                    <p>Chicken</p>
-                </span>
-            </div>
-            <div class="startFooter">
-                <div class="author">
-                    <img src="Imagenes/start/fotoJohnSmith.png" alt="">
-                    <div class="authorName">
-                        <p class="name">John Smith</p>
-                        <p class="date">15 March 2022</p>
-                    </div>
-                </div>
-                <button class="btn">
-                    <p>View recipies</p> <img src="Svg/icons/play.svg" alt="">
-                </button>
-            </div>
-
         </section>
 
         <section class="categories">
@@ -199,7 +203,9 @@
                 </button>
             </div>
             <img src="Imagenes/learnMore/Group 880.png" alt="" class="learnMoreRight">
-            <button class="hidden btn">Learn More</button>
+            <button class="hidden btn">
+                <p>Learn More</p>
+            </button>
         </section>
 
         <div class="postSection">
@@ -354,9 +360,12 @@
                     </article>
 
                 </div>
-                <button class="btn">
-                    <p>Visit Our Instagram </p><img src="Svg/social/instagramWhite.svg" alt="">
-                </button>
+                <a
+                    href="https://www.instagram.com/the_foodieland?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                    <button class="btn">
+                        <p>Visit Our Instagram </p><img src="Svg/social/instagramWhite.svg" alt="">
+                    </button>
+                </a>
             </section>
         </div>
 
@@ -521,6 +530,8 @@
         </div>
     </footer>
     <script type="module" src="JS/dynamic.js" defer></script>
+    <script type="module" src="JS/hotRecipes.js" defer></script>
+    <script type="module" src="JS/hotRecipesMobile.js" defer></script>
     <script type="module" src="JS/recipes.js" defer></script>
     <script type="module" src="JS/otherRecipes.js" defer></script>
     <script type="module" src="JS/langToggle.js" defer></script>

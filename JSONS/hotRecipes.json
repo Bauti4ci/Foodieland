@@ -1,7 +1,9 @@
-{
-    "id": 17,
-    "title": "Big and Juicy Wagyu Beef Cheeseburger",
-    "image": "Imagenes/recipies/burger.png",
-    "cookTime": "30 Minutes",
-    "type": "Snack"
-}
+[
+    {
+        "id": 17,
+        "title": "Spicy delicious chiken wings ",
+        "image": "Imagenes/start/chiken.png",
+        "cookingMinutes": "30 Minutes",
+        "type": "Chicken"
+    }
+]

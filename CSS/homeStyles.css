@@ -1,5 +1,14 @@
+#start {
+    display: flex;
+    justify-content: center;
+}
+
+#mobileStart {
+    display: flex;
+    justify-content: center;
+}
+
 .start {
-    margin-top: 42px;
     display: flex;
     justify-content: space-between;
     border: 1px solid rgba(0, 0, 0, 0);
@@ -7,7 +16,6 @@
     width: 88%;
     overflow: hidden;
     min-height: 640px;
-    background-image: url("../Imagenes/start/pollomobile.jpg");
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: right center;
@@ -20,7 +28,7 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
-    width: 48%;
+    width: 50%;
     background-color: rgba(231, 250, 254, 1);
     padding: 50px;
     position: relative;
@@ -318,13 +326,13 @@ h3 {
     transform: none;
 }
 
-.recipesBox a {
+.recipeName {
     font-size: 1.5rem;
     font-weight: 600;
     margin-left: 8px;
 }
 
-.recipesBox a:hover {
+.recipeName:hover {
     transform: none;
     box-shadow: none
 }

@@ -411,12 +411,12 @@ h6 {
     right: 5%;
 }
 
-.otherRecipesBox a {
+.otherRecipeName {
     font-size: 1.125rem;
     font-weight: 600;
 }
 
-.otherRecipesBox a:hover {
+.otherRecipeName:hover {
     transform: none;
     box-shadow: none
 }

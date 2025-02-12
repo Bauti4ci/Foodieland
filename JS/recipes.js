@@ -10,19 +10,19 @@ fetch('JSONS/Recipes.json')
     .then(recipes => {
         /* Por cada recipe creamos un article (importante guardarlo como string) */
         const recipesArrayArticles = recipes.map(recipe => (
-            `<article class="recipesBox recipes" id="">
+            `<a href="RecipeDetails.html?id=${recipe.id}" class="recipesBox recipes" id="">
                     <img src="${recipe.image}" alt="" class="gridPhoto">
                     <img src="Svg/Guardados/nomarcado.svg" id="${recipe.id}" alt="" class="saves heart">
-                    <a href="RecipeDetails.html">${recipe.title}</a>
+                    <p class="recipeName">${recipe.title}</p>
                     <div class="recipesDetails">
                         <span><img src="Svg/icons/timer.svg" alt="" class="recipesIcons">
-                            <p>${recipe.cookTime}</p>
+                            <p>${recipe.cookingMinutes}</p>
                         </span>
                         <span><img src="Svg/icons/forknife.svg" alt="" class="recipesIcons">
                             <p>${recipe.type}</p>
                         </span>
                     </div>
-                </article>`
+                </a>`
         ));
 
         /* Agregamos la foto en la posicion que queramos */
