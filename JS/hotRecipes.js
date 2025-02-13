@@ -7,15 +7,13 @@ fetch('JSONS/hotRecipes.json')
     .then(hotRecipes => {
         /* Por cada recipe creamos un article (importante guardarlo como string) */
         const hotRecipesArray = hotRecipes.map(recipe => (
-            `<div class="hiddenMobile start" id="${recipe.id}" style="background-image: url(${recipe.image});">
+            `<article class="hiddenMobile start" id="${recipe.id}" style="background-image: url(${recipe.image});">
                 <div class="leftstart">
                     <span class="firstbtn">
                         <img src="Imagenes/start/pergamino.png" alt="">
                         <p>Hot Recipes</p>
                     </span>
-                    <a href="RecipeDetails.html">
                         <h1 class="homeTranslate">${recipe.title}</h1>
-                    </a>
                     <p class="subH">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quos iste laboriosam
                         consequatur
                         pariatur error obcaecati placeat unde nihil facilis!</p>
@@ -37,13 +35,15 @@ fetch('JSONS/hotRecipes.json')
                                 <p class="date">15 March 2022</p>
                             </div>
                         </div>
+                        <a href="RecipeDetails.html?id=${recipe.id}">
                         <button class="btn">
                             <p>View recipies</p> <img src="Svg/icons/play.svg" alt="">
                         </button>
+                        </a>
                     </div>
                     <img src="Imagenes/start/Badge.png" alt="" class="badge">
                 </div>
-            </div>`
+            </article>`
 
 
         ));

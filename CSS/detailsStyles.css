@@ -181,6 +181,8 @@ h6 {
     border-radius: 30px;
     width: 100%;
     height: auto;
+    max-width: 840px;
+    max-height: 600px;
 }
 
 .recipeVidIcon {

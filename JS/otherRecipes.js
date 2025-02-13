@@ -4,13 +4,10 @@ import { evalFavorites } from "./favorites.js";
 const otherRecipesSection = document.querySelector('.otherRecipesGrid');
 
 fetch('JSONS/otherRecipes.json')
-    /* La respuesta tiene un body con un json dentro, osea es string */
     .then(response => response.json())
-    /* Se convierte el json a objeto/array */
     .then(otherRecipes => {
-        /* Por cada recipe creamos un article (importante guardarlo como string) */
         const otherRecipesArrayArticles = otherRecipes.map(recipe => (
-            `<a href="RecipeDetails.html" class= "otherRecipesBox recipes">
+            `<a href="RecipeDetails.html?id=${recipe.id}" class= "otherRecipesBox recipes">
                 <img src="${recipe.image}" alt="" class="dailyImg">
                 <img src="Svg/Guardados/nomarcado.svg" id="${recipe.id}" alt="" class="dailySaves heart">
                 <p class="otherRecipeName">${recipe.title}</p>
@@ -23,35 +20,23 @@ fetch('JSONS/otherRecipes.json')
                         </span>
                 </div>
             </a>`
-
         ));
-
-        /* Agregamos el array (en formato string) de recipes dentro de la section */
         otherRecipesSection.innerHTML = otherRecipesArrayArticles.join(' ');
-
         return otherRecipes
-
     })
 
     .then(otherRecipes => {
-
-        /* Recipes es el array de recetas */
-        /* Podemos ir una por una y buscar la imagen del <3 de cada una segun el id */
-        /* Una vez tenemos la img podemos agregarle el eventListener  */
         otherRecipes.forEach(recipe => {
             const favBtn = document.getElementById(recipe.id)
             evalFavorites(recipe.id)
-            favBtn.addEventListener('click', () => toggleFavorites(recipe.id))
+            favBtn.addEventListener('click', (event) => {
+                toggleFavorites(recipe.id)
+                event.preventDefault()
+            })
         });
-
-
-
     })
-
-    /* Se ejecuta en caso de error */
     .catch(error => {
         console.error('Error: ', error);
 
-        /* En caso de error mostramos un mensaje en la section */
         otherRecipesSection.innerHTML = '<p>Hubo un error al cargar las recipes, recargue la página</p>';
     });
