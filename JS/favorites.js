@@ -1,8 +1,10 @@
 export function toggleFavorites(id) {
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     const favBtn = document.getElementById(id)
-    if (favorites.includes(id)) {
-        favorites.splice(id)
+    const position = favorites.indexOf(id)
+
+    if (position >= 0) {
+        favorites.splice(position, 1)
         favBtn.src = "Svg/Guardados/nomarcado.svg"
     } else {
         favorites.push(id)

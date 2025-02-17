@@ -4,6 +4,88 @@
         "title": "Spicy delicious chiken wings ",
         "image": "Imagenes/start/chikensauce.png",
         "cookingMinutes": "30 Minutes",
-        "type": "Chicken"
+        "type": "Chicken",
+        "preparationMinutes": "15 minutes",
+        "extendedIngredients": [
+            {
+                "aisle": "Milk, Eggs, Other Dairy",
+                "amount": 1.0,
+                "consistency": "solid",
+                "id": 1001,
+                "image": "butter-sliced.jpg",
+                "measures": {
+                    "metric": {
+                        "amount": 1.0,
+                        "unitLong": "Tbsp",
+                        "unitShort": "Tbsp"
+                    },
+                    "us": {
+                        "amount": 1.0,
+                        "unitLong": "Tbsp",
+                        "unitShort": "Tbsp"
+                    }
+                },
+                "meta": [],
+                "name": "butter",
+                "original": "1 tbsp butter",
+                "originalName": "butter",
+                "unit": "tbsp"
+            },
+            {
+                "aisle": "Produce",
+                "amount": 2.0,
+                "consistency": "solid",
+                "id": 10011135,
+                "image": "cauliflower.jpg",
+                "measures": {
+                    "metric": {
+                        "amount": 473.176,
+                        "unitLong": "milliliters",
+                        "unitShort": "ml"
+                    },
+                    "us": {
+                        "amount": 2.0,
+                        "unitLong": "cups",
+                        "unitShort": "cups"
+                    }
+                },
+                "meta": [
+                    "frozen",
+                    "thawed",
+                    "cut into bite-sized pieces"
+                ],
+                "name": "cauliflower florets",
+                "original": "about 2 cups frozen cauliflower florets, thawed, cut into bite-sized pieces",
+                "originalName": "about frozen cauliflower florets, thawed, cut into bite-sized pieces",
+                "unit": "cups"
+            },
+            {
+                "aisle": "Cheese",
+                "amount": 2.0,
+                "consistency": "solid",
+                "id": 1041009,
+                "image": "cheddar-cheese.png",
+                "measures": {
+                    "metric": {
+                        "amount": 2.0,
+                        "unitLong": "Tbsps",
+                        "unitShort": "Tbsps"
+                    },
+                    "us": {
+                        "amount": 2.0,
+                        "unitLong": "Tbsps",
+                        "unitShort": "Tbsps"
+                    }
+                },
+                "meta": [
+                    "grated",
+                    "(I used romano)"
+                ],
+                "name": "cheese",
+                "original": "2 tbsp grated cheese (I used romano)",
+                "originalName": "grated cheese (I used romano)",
+                "unit": "tbsp"
+            }
+        ]
     }
 ]

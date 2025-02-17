@@ -4,7 +4,89 @@
         "title": "Big and Juicy Wagyu Beef Cheeseburger",
         "image": "Imagenes/recipies/burger.png",
         "cookingMinutes": "30 Minutes",
-        "type": "Snack"
+        "type": "Snack",
+        "preparationMinutes": "15 minutes",
+        "extendedIngredients": [
+            {
+                "aisle": "Milk, Eggs, Other Dairy",
+                "amount": 1.0,
+                "consistency": "solid",
+                "id": 1001,
+                "image": "butter-sliced.jpg",
+                "measures": {
+                    "metric": {
+                        "amount": 1.0,
+                        "unitLong": "Tbsp",
+                        "unitShort": "Tbsp"
+                    },
+                    "us": {
+                        "amount": 1.0,
+                        "unitLong": "Tbsp",
+                        "unitShort": "Tbsp"
+                    }
+                },
+                "meta": [],
+                "name": "butter",
+                "original": "1 tbsp butter",
+                "originalName": "butter",
+                "unit": "tbsp"
+            },
+            {
+                "aisle": "Produce",
+                "amount": 2.0,
+                "consistency": "solid",
+                "id": 10011135,
+                "image": "cauliflower.jpg",
+                "measures": {
+                    "metric": {
+                        "amount": 473.176,
+                        "unitLong": "milliliters",
+                        "unitShort": "ml"
+                    },
+                    "us": {
+                        "amount": 2.0,
+                        "unitLong": "cups",
+                        "unitShort": "cups"
+                    }
+                },
+                "meta": [
+                    "frozen",
+                    "thawed",
+                    "cut into bite-sized pieces"
+                ],
+                "name": "cauliflower florets",
+                "original": "about 2 cups frozen cauliflower florets, thawed, cut into bite-sized pieces",
+                "originalName": "about frozen cauliflower florets, thawed, cut into bite-sized pieces",
+                "unit": "cups"
+            },
+            {
+                "aisle": "Cheese",
+                "amount": 2.0,
+                "consistency": "solid",
+                "id": 1041009,
+                "image": "cheddar-cheese.png",
+                "measures": {
+                    "metric": {
+                        "amount": 2.0,
+                        "unitLong": "Tbsps",
+                        "unitShort": "Tbsps"
+                    },
+                    "us": {
+                        "amount": 2.0,
+                        "unitLong": "Tbsps",
+                        "unitShort": "Tbsps"
+                    }
+                },
+                "meta": [
+                    "grated",
+                    "(I used romano)"
+                ],
+                "name": "cheese",
+                "original": "2 tbsp grated cheese (I used romano)",
+                "originalName": "grated cheese (I used romano)",
+                "unit": "tbsp"
+            }
+        ]
     },
     {
         "id": 2,
@@ -12,7 +94,88 @@
         "image": "Imagenes/recipies/salmon.png",
         "cookingMinutes": "30 Minutes",
         "type": "Fish",
-        "preparationMinutes": "15 minutes"
+        "preparationMinutes": "15 minutes",
+        "extendedIngredients": [
+            {
+                "aisle": "Milk, Eggs, Other Dairy",
+                "amount": 1.0,
+                "consistency": "solid",
+                "id": 1001,
+                "image": "butter-sliced.jpg",
+                "measures": {
+                    "metric": {
+                        "amount": 1.0,
+                        "unitLong": "Tbsp",
+                        "unitShort": "Tbsp"
+                    },
+                    "us": {
+                        "amount": 1.0,
+                        "unitLong": "Tbsp",
+                        "unitShort": "Tbsp"
+                    }
+                },
+                "meta": [],
+                "name": "butter",
+                "original": "1 tbsp butter",
+                "originalName": "butter",
+                "unit": "tbsp"
+            },
+            {
+                "aisle": "Produce",
+                "amount": 2.0,
+                "consistency": "solid",
+                "id": 10011135,
+                "image": "cauliflower.jpg",
+                "measures": {
+                    "metric": {
+                        "amount": 473.176,
+                        "unitLong": "milliliters",
+                        "unitShort": "ml"
+                    },
+                    "us": {
+                        "amount": 2.0,
+                        "unitLong": "cups",
+                        "unitShort": "cups"
+                    }
+                },
+                "meta": [
+                    "frozen",
+                    "thawed",
+                    "cut into bite-sized pieces"
+                ],
+                "name": "cauliflower florets",
+                "original": "about 2 cups frozen cauliflower florets, thawed, cut into bite-sized pieces",
+                "originalName": "about frozen cauliflower florets, thawed, cut into bite-sized pieces",
+                "unit": "cups"
+            },
+            {
+                "aisle": "Cheese",
+                "amount": 2.0,
+                "consistency": "solid",
+                "id": 1041009,
+                "image": "cheddar-cheese.png",
+                "measures": {
+                    "metric": {
+                        "amount": 2.0,
+                        "unitLong": "Tbsps",
+                        "unitShort": "Tbsps"
+                    },
+                    "us": {
+                        "amount": 2.0,
+                        "unitLong": "Tbsps",
+                        "unitShort": "Tbsps"
+                    }
+                },
+                "meta": [
+                    "grated",
+                    "(I used romano)"
+                ],
+                "name": "cheese",
+                "original": "2 tbsp grated cheese (I used romano)",
+                "originalName": "grated cheese (I used romano)",
+                "unit": "tbsp"
+            }
+        ]
     },
     {
         "id": 3,
@@ -20,7 +183,88 @@
         "image": "Imagenes/recipies/pancakes.png",
         "cookingMinutes": "30 Minutes",
         "type": "Breakfast",
-        "preparationMinutes": "15 minutes"
+        "preparationMinutes": "15 minutes",
+        "extendedIngredients": [
+            {
+                "aisle": "Milk, Eggs, Other Dairy",
+                "amount": 1.0,
+                "consistency": "solid",
+                "id": 1001,
+                "image": "butter-sliced.jpg",
+                "measures": {
+                    "metric": {
+                        "amount": 1.0,
+                        "unitLong": "Tbsp",
+                        "unitShort": "Tbsp"
+                    },
+                    "us": {
+                        "amount": 1.0,
+                        "unitLong": "Tbsp",
+                        "unitShort": "Tbsp"
+                    }
+                },
+                "meta": [],
+                "name": "butter",
+                "original": "1 tbsp butter",
+                "originalName": "butter",
+                "unit": "tbsp"
+            },
+            {
+                "aisle": "Produce",
+                "amount": 2.0,
+                "consistency": "solid",
+                "id": 10011135,
+                "image": "cauliflower.jpg",
+                "measures": {
+                    "metric": {
+                        "amount": 473.176,
+                        "unitLong": "milliliters",
+                        "unitShort": "ml"
+                    },
+                    "us": {
+                        "amount": 2.0,
+                        "unitLong": "cups",
+                        "unitShort": "cups"
+                    }
+                },
+                "meta": [
+                    "frozen",
+                    "thawed",
+                    "cut into bite-sized pieces"
+                ],
+                "name": "cauliflower florets",
+                "original": "about 2 cups frozen cauliflower florets, thawed, cut into bite-sized pieces",
+                "originalName": "about frozen cauliflower florets, thawed, cut into bite-sized pieces",
+                "unit": "cups"
+            },
+            {
+                "aisle": "Cheese",
+                "amount": 2.0,
+                "consistency": "solid",
+                "id": 1041009,
+                "image": "cheddar-cheese.png",
+                "measures": {
+                    "metric": {
+                        "amount": 2.0,
+                        "unitLong": "Tbsps",
+                        "unitShort": "Tbsps"
+                    },
+                    "us": {
+                        "amount": 2.0,
+                        "unitLong": "Tbsps",
+                        "unitShort": "Tbsps"
+                    }
+                },
+                "meta": [
+                    "grated",
+                    "(I used romano)"
+                ],
+                "name": "cheese",
+                "original": "2 tbsp grated cheese (I used romano)",
+                "originalName": "grated cheese (I used romano)",
+                "unit": "tbsp"
+            }
+        ]
     },
     {
         "id": 4,
@@ -36,7 +280,88 @@
         "image": "Imagenes/recipies/salad.png",
         "cookingMinutes": "30 Minutes",
         "type": "Healthy",
-        "preparationMinutes": "15 minutes"
+        "preparationMinutes": "15 minutes",
+        "extendedIngredients": [
+            {
+                "aisle": "Milk, Eggs, Other Dairy",
+                "amount": 1.0,
+                "consistency": "solid",
+                "id": 1001,
+                "image": "butter-sliced.jpg",
+                "measures": {
+                    "metric": {
+                        "amount": 1.0,
+                        "unitLong": "Tbsp",
+                        "unitShort": "Tbsp"
+                    },
+                    "us": {
+                        "amount": 1.0,
+                        "unitLong": "Tbsp",
+                        "unitShort": "Tbsp"
+                    }
+                },
+                "meta": [],
+                "name": "butter",
+                "original": "1 tbsp butter",
+                "originalName": "butter",
+                "unit": "tbsp"
+            },
+            {
+                "aisle": "Produce",
+                "amount": 2.0,
+                "consistency": "solid",
+                "id": 10011135,
+                "image": "cauliflower.jpg",
+                "measures": {
+                    "metric": {
+                        "amount": 473.176,
+                        "unitLong": "milliliters",
+                        "unitShort": "ml"
+                    },
+                    "us": {
+                        "amount": 2.0,
+                        "unitLong": "cups",
+                        "unitShort": "cups"
+                    }
+                },
+                "meta": [
+                    "frozen",
+                    "thawed",
+                    "cut into bite-sized pieces"
+                ],
+                "name": "cauliflower florets",
+                "original": "about 2 cups frozen cauliflower florets, thawed, cut into bite-sized pieces",
+                "originalName": "about frozen cauliflower florets, thawed, cut into bite-sized pieces",
+                "unit": "cups"
+            },
+            {
+                "aisle": "Cheese",
+                "amount": 2.0,
+                "consistency": "solid",
+                "id": 1041009,
+                "image": "cheddar-cheese.png",
+                "measures": {
+                    "metric": {
+                        "amount": 2.0,
+                        "unitLong": "Tbsps",
+                        "unitShort": "Tbsps"
+                    },
+                    "us": {
+                        "amount": 2.0,
+                        "unitLong": "Tbsps",
+                        "unitShort": "Tbsps"
+                    }
+                },
+                "meta": [
+                    "grated",
+                    "(I used romano)"
+                ],
+                "name": "cheese",
+                "original": "2 tbsp grated cheese (I used romano)",
+                "originalName": "grated cheese (I used romano)",
+                "unit": "tbsp"
+            }
+        ]
     },
     {
         "id": 6,
@@ -52,7 +377,88 @@
         "image": "Imagenes/recipies/chickenRice.png",
         "cookingMinutes": "30 Minutes",
         "type": "Snack",
-        "preparationMinutes": "15 minutes"
+        "preparationMinutes": "15 minutes",
+        "extendedIngredients": [
+            {
+                "aisle": "Milk, Eggs, Other Dairy",
+                "amount": 1.0,
+                "consistency": "solid",
+                "id": 1001,
+                "image": "butter-sliced.jpg",
+                "measures": {
+                    "metric": {
+                        "amount": 1.0,
+                        "unitLong": "Tbsp",
+                        "unitShort": "Tbsp"
+                    },
+                    "us": {
+                        "amount": 1.0,
+                        "unitLong": "Tbsp",
+                        "unitShort": "Tbsp"
+                    }
+                },
+                "meta": [],
+                "name": "butter",
+                "original": "1 tbsp butter",
+                "originalName": "butter",
+                "unit": "tbsp"
+            },
+            {
+                "aisle": "Produce",
+                "amount": 2.0,
+                "consistency": "solid",
+                "id": 10011135,
+                "image": "cauliflower.jpg",
+                "measures": {
+                    "metric": {
+                        "amount": 473.176,
+                        "unitLong": "milliliters",
+                        "unitShort": "ml"
+                    },
+                    "us": {
+                        "amount": 2.0,
+                        "unitLong": "cups",
+                        "unitShort": "cups"
+                    }
+                },
+                "meta": [
+                    "frozen",
+                    "thawed",
+                    "cut into bite-sized pieces"
+                ],
+                "name": "cauliflower florets",
+                "original": "about 2 cups frozen cauliflower florets, thawed, cut into bite-sized pieces",
+                "originalName": "about frozen cauliflower florets, thawed, cut into bite-sized pieces",
+                "unit": "cups"
+            },
+            {
+                "aisle": "Cheese",
+                "amount": 2.0,
+                "consistency": "solid",
+                "id": 1041009,
+                "image": "cheddar-cheese.png",
+                "measures": {
+                    "metric": {
+                        "amount": 2.0,
+                        "unitLong": "Tbsps",
+                        "unitShort": "Tbsps"
+                    },
+                    "us": {
+                        "amount": 2.0,
+                        "unitLong": "Tbsps",
+                        "unitShort": "Tbsps"
+                    }
+                },
+                "meta": [
+                    "grated",
+                    "(I used romano)"
+                ],
+                "name": "cheese",
+                "original": "2 tbsp grated cheese (I used romano)",
+                "originalName": "grated cheese (I used romano)",
+                "unit": "tbsp"
+            }
+        ]
     },
     {
         "id": 8,
@@ -60,6 +466,87 @@
         "image": "Imagenes/recipies/pasta.png",
         "cookingMinutes": "30 Minutes",
         "type": "Noodles",
-        "preparationMinutes": "15 minutes"
+        "preparationMinutes": "15 minutes",
+        "extendedIngredients": [
+            {
+                "aisle": "Milk, Eggs, Other Dairy",
+                "amount": 1.0,
+                "consistency": "solid",
+                "id": 1001,
+                "image": "butter-sliced.jpg",
+                "measures": {
+                    "metric": {
+                        "amount": 1.0,
+                        "unitLong": "Tbsp",
+                        "unitShort": "Tbsp"
+                    },
+                    "us": {
+                        "amount": 1.0,
+                        "unitLong": "Tbsp",
+                        "unitShort": "Tbsp"
+                    }
+                },
+                "meta": [],
+                "name": "butter",
+                "original": "1 tbsp butter",
+                "originalName": "butter",
+                "unit": "tbsp"
+            },
+            {
+                "aisle": "Produce",
+                "amount": 2.0,
+                "consistency": "solid",
+                "id": 10011135,
+                "image": "cauliflower.jpg",
+                "measures": {
+                    "metric": {
+                        "amount": 473.176,
+                        "unitLong": "milliliters",
+                        "unitShort": "ml"
+                    },
+                    "us": {
+                        "amount": 2.0,
+                        "unitLong": "cups",
+                        "unitShort": "cups"
+                    }
+                },
+                "meta": [
+                    "frozen",
+                    "thawed",
+                    "cut into bite-sized pieces"
+                ],
+                "name": "cauliflower florets",
+                "original": "about 2 cups frozen cauliflower florets, thawed, cut into bite-sized pieces",
+                "originalName": "about frozen cauliflower florets, thawed, cut into bite-sized pieces",
+                "unit": "cups"
+            },
+            {
+                "aisle": "Cheese",
+                "amount": 2.0,
+                "consistency": "solid",
+                "id": 1041009,
+                "image": "cheddar-cheese.png",
+                "measures": {
+                    "metric": {
+                        "amount": 2.0,
+                        "unitLong": "Tbsps",
+                        "unitShort": "Tbsps"
+                    },
+                    "us": {
+                        "amount": 2.0,
+                        "unitLong": "Tbsps",
+                        "unitShort": "Tbsps"
+                    }
+                },
+                "meta": [
+                    "grated",
+                    "(I used romano)"
+                ],
+                "name": "cheese",
+                "original": "2 tbsp grated cheese (I used romano)",
+                "originalName": "grated cheese (I used romano)",
+                "unit": "tbsp"
+            }
+        ]
     }
 ]

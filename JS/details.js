@@ -137,57 +137,14 @@ fetch('JSONS/Recipes.json')
                 <div class="ing">
                     <p>For main dish</p>
                     <ul class"ingridientsList">
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
+                        ${selectedRecipe.extendedIngredients.map(ingredient => {
+                return `<span>
+                <input type="checkbox" name="" id="check" class="check">
+                <label for="check">${ingredient.original}</label>
+                </span>
+                <hr>`
+            }).join('')}
 
-                    </ul>
-                </div>
-                <div class="ing">
-                    <p>For the sauce</p>
-                    <ul>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
                     </ul>
                 </div>
             </div>
@@ -319,25 +276,14 @@ fetch('JSONS/Recipes.json')
         </section>`
 
         }
-        return recipes
-    })
 
-    .then(recipes => {
-        const ingridientsArray = recipes.extendedIngredients.map(ingridient => (
-            `<span>
-                <input type="checkbox" name="" id="check" class="check">
-                <label for="check">${ingridient.aisle},${ingridient.amount}</label>
-            </span>`
-        ))
-        const ingridients = document.querySelector('.ingridientsList')
 
-        ingridients.innerHTML = ingridientsArray.join(' ');
+        return selectedRecipe
     })
 
     .catch(error => {
         console.error('Error: ', error);
 
-        /* En caso de error mostramos un mensaje en la section */
         main.innerHTML = '<p class"error">Hubo un error al cargar las recipes, recargue la página</p>';
     });
 
@@ -351,7 +297,6 @@ fetch('JSONS/otherRecipes.json')
                 selectedRecipe = recipe
             }
         })
-        console.log(selectedRecipe)
         if (selectedRecipe.id === undefined) {
         } else {
             main.innerHTML = `
@@ -469,62 +414,19 @@ fetch('JSONS/otherRecipes.json')
 
 
         <section class="ingredients">
-            <div class="list">
+           <div class="list">
                 <h3>Ingredients</h3>
                 <div class="ing">
                     <p>For main dish</p>
-                    <ul>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
+                    <ul class"ingridientsList">
+                        ${selectedRecipe.extendedIngredients.map(ingredient => {
+                return `<span>
+                <input type="checkbox" name="" id="check" class="check">
+                <label for="check">${ingredient.original}</label>
+                </span>
+                <hr>`
+            }).join('')}
 
-                    </ul>
-                </div>
-                <div class="ing">
-                    <p>For the sauce</p>
-                    <ul>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
-                        <span>
-                            <input type="checkbox" name="" id="check" class="check">
-                            <label for="check">Lorem ipsum dolor sit amet</label>
-                        </span>
-                        <hr>
                     </ul>
                 </div>
             </div>
@@ -660,7 +562,6 @@ fetch('JSONS/otherRecipes.json')
     .catch(error => {
         console.error('Error: ', error);
 
-        /* En caso de error mostramos un mensaje en la section */
         main.innerHTML = '<p class"error">Hubo un error al cargar la recipes, recargue la página</p>';
     });
 
@@ -983,6 +884,5 @@ fetch('JSONS/hotRecipes.json')
     .catch(error => {
         console.error('Error: ', error);
 
-        /* En caso de error mostramos un mensaje en la section */
         main.innerHTML = '<p class"error">Hubo un error al cargar la recipes, recargue la página</p>';
     });    

@@ -3,10 +3,10 @@ import { evalFavorites } from "./favorites.js";
 
 const recipesSection = document.querySelector('.recipesGrid');
 
-fetch('JSONS/Recipes.json')
+fetch('https://api.spoonacular.com/recipes/random?number=1&apiKey=bd1332e762454289a96c401f256fed9f')
     .then(response => response.json())
     .then(recipes => {
-        const recipesArrayArticles = recipes.map(recipe => (
+        const recipesArrayArticles = Array(recipes).map(recipe => (
             `<a href="RecipeDetails.html?id=${recipe.id}" class="recipesBox recipes" id="">
                     <img src="${recipe.image}" alt="" class="gridPhoto">
                     <img src="Svg/Guardados/nomarcado.svg" id="${recipe.id}" alt="" class="saves heart">
@@ -27,7 +27,7 @@ fetch('JSONS/Recipes.json')
     })
 
     .then(recipes => {
-        recipes.forEach(recipe => {
+        Array(recipes).forEach(recipe => {
             const favBtn = document.getElementById(recipe.id)
             evalFavorites(recipe.id)
             favBtn.addEventListener('click', (event) => {
