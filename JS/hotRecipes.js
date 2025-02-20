@@ -1,12 +1,12 @@
 const startSection = document.querySelector('#start');
 
-fetch('JSONS/hotRecipes.json')
+fetch('https://api.spoonacular.com/recipes/random?number=1&apiKey=3f804dd295df422e8f581d4324762e34')
     /* La respuesta tiene un body con un json dentro, osea es string */
     .then(response => response.json())
     /* Se convierte el json a objeto/array */
-    .then(hotRecipes => {
+    .then(recipes => {
         /* Por cada recipe creamos un article (importante guardarlo como string) */
-        const hotRecipesArray = hotRecipes.map(recipe => (
+        const hotRecipesArray = recipes.recipes.map(recipe => (
             `<article class="hiddenMobile start" id="${recipe.id}" style="background-image: url(${recipe.image});">
                 <div class="leftstart">
                     <span class="firstbtn">
@@ -20,11 +20,11 @@ fetch('JSONS/hotRecipes.json')
                     <div class="labels">
                         <span class="secondbtn">
                             <img src="Svg/icons/timer.svg" alt="">
-                            <p>${recipe.cookingMinutes}</p>
+                            <p>${recipe.readyInMinutes} Minutes</p>
                         </span>
                         <span class="secondbtn">
                             <img src="Svg/icons/forknife.svg" alt="">
-                            <p>${recipe.type}</p>
+                            <p>${recipe.dishTypes[0]}</p>
                         </span>
                     </div>
                     <div class="startFooter">

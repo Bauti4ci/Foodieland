@@ -3,30 +3,30 @@ import { evalFavorites } from "./favorites.js";
 
 const otherRecipesSection = document.querySelector('.otherRecipesGrid');
 
-fetch('JSONS/otherRecipes.json')
+fetch('https://api.spoonacular.com/recipes/random?number=8&apiKey=3f804dd295df422e8f581d4324762e34')
     .then(response => response.json())
-    .then(otherRecipes => {
-        const otherRecipesArrayArticles = otherRecipes.map(recipe => (
+    .then(recipes => {
+        const otherRecipesArrayArticles = recipes.recipes.map(recipe => (
             `<a href="RecipeDetails.html?id=${recipe.id}" class= "otherRecipesBox recipes">
                 <img src="${recipe.image}" alt="" class="dailyImg">
                 <img src="Svg/Guardados/nomarcado.svg" id="${recipe.id}" alt="" class="dailySaves heart">
                 <p class="otherRecipeName">${recipe.title}</p>
                 <div class="dailyDetails">
                     <span><img src="Svg/icons/timer.svg" alt="" class="dailyIcons">
-                        <p>${recipe.cookingMinutes}</p>
+                        <p>${recipe.readyInMinutes} Minutes</p>
                     </span>
                     <span><img src="Svg/icons/forknife.svg" alt="" class="dailyIcons">
-                        <p>${recipe.type}</p>
+                        <p>${recipe.dishTypes[0]}</p>
                         </span>
                 </div>
             </a>`
         ));
         otherRecipesSection.innerHTML = otherRecipesArrayArticles.join(' ');
-        return otherRecipes
+        return recipes
     })
 
-    .then(otherRecipes => {
-        otherRecipes.forEach(recipe => {
+    .then(recipes => {
+        recipes.recipes.forEach(recipe => {
             const favBtn = document.getElementById(recipe.id)
             evalFavorites(recipe.id)
             favBtn.addEventListener('click', (event) => {

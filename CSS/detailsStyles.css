@@ -19,6 +19,11 @@
     display: none;
 }
 
+.principal {
+    display: flex;
+    flex-direction: column;
+}
+
 .title {
     display: flex;
     gap: 53px;
@@ -370,7 +375,7 @@ h3 {
 
 .ads {
     max-width: 400px;
-    height: auto;
+    max-height: 434px;
 
 }
 
