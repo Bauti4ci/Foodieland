@@ -5,10 +5,15 @@ const params = new URLSearchParams(window.location.search);
 const recipeId = params.get('id');
 const principal = document.querySelector('.principal')
 const secondary = document.querySelector('.secondary')
+const otherRecipesInSection = document.querySelector('.otherRecipesInSection')
+const noPhoto = 'Imagenes/noPhoto/noPhoto.png'
+
+const jsonOtherRecipesInDetails = JSON.parse(sessionStorage.getItem('otherRecipesInDetails'));
+
+const jsonOtherRecipesInSection = JSON.parse(sessionStorage.getItem('otherRecipesInSection'));
 
 
-
-fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?includeNutrition=true&apiKey=3f804dd295df422e8f581d4324762e34`)
+fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?includeNutrition=true&apiKey=178a79a57ae64393823744c2e5e76fa5`)
     .then(response => response.json())
     .then(recipe => {
 
@@ -120,19 +125,11 @@ fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?includeNutrit
             return value.name == 'Cholesterol'
         })[0].amount} mg</p>
                         </span>
-                        <hr>
-
+                        <hr
                     </div>
-                    <p class="nutDescription">adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. </p>
                 </div>
             </div>
-            <p class="principalDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+            <p class="principalDescription">${recipe.summary}</p>
         </section>
 
 
@@ -154,7 +151,7 @@ fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?includeNutrit
                 </div>
             </div>
             <div class="otherRecipesInDetails">
-                <div>
+                <div class"otherRecipesInSection">
                     <article class="miniRecipes">
                         <img src="Imagenes/recipies/meatballs.png" alt="">
                         <span>
@@ -179,49 +176,7 @@ fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?includeNutrit
                 </div>
                 <img src="Imagenes/recipies/Ads.png" alt="" class="ads">
             </div>
-        </section>
-
-        <Section class="directions">
-            <h3>Directions</h3>
-            <article class="steps">
-                <span>
-                    <input type="checkbox" name="" id="check">
-                    <label for="check">1. Lorem ipsum dolor sit amet</label>
-                </span>
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                    magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-                    labore et dolore magnam aliquam quaerat voluptatem.</p>
-                <img src="Imagenes/recipeDetailsPage/Rectangle 23.png" alt="">
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                    magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-                    labore et dolore magnam aliquam quaerat voluptatem.</p>
-            </article>
-            <hr>
-            <article class="steps">
-                <span>
-                    <input type="checkbox" name="" id="check">
-                    <label for="check">2. Lorem ipsum dolor sit amet</label>
-                </span>
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                    magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-                    labore et dolore magnam aliquam quaerat voluptatem.</p>
-            </article>
-            <hr>
-            <article class="steps">
-                <span>
-                    <input type="checkbox" name="" id="check">
-                    <label for="check">3. Lorem ipsum dolor sit amet</label>
-                </span>
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                    magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-                    labore et dolore magnam aliquam quaerat voluptatem.</p>
-            </article>
-            <hr>
-        </Section>`
+        </section>`
     })
 
     .catch(error => {
@@ -230,11 +185,44 @@ fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?includeNutrit
         principal.innerHTML = '<p class"error">Hubo un error al cargar las recipes, recargue la página</p>';
     });
 
-fetch('https://api.spoonacular.com/recipes/random?number=4&apiKey=3f804dd295df422e8f581d4324762e34')
-    .then(response => response.json())
-    .then(recipes => {
-        const otherRecipesArrayArticles = recipes.recipes.map(recipe => (
-            `<a href="RecipeDetails.html?id=${recipe.id}" class= "otherRecipesBox recipes">
+
+if (jsonOtherRecipesInDetails) {
+    const otherRecipesArrayArticles = jsonOtherRecipesInDetails.map(
+        recipe => {
+
+            return (
+                `<a href="RecipeDetails.html?id=${recipe.id}" class= "otherRecipesBox recipes">
+                <img src="${recipe.image ? recipe.image : noPhoto}" alt="" class="dailyImg">
+                <img src="Svg/Guardados/nomarcado.svg" id="${recipe.id}" alt="" class="dailySaves heart">
+                <p class="otherRecipeName">${recipe.title}</p>
+                <div class="dailyDetails">
+                    <span><img src="Svg/icons/timer.svg" alt="" class="dailyIcons">
+                        <p>${recipe.readyInMinutes} Minutes</p>
+                    </span>
+                    <span><img src="Svg/icons/forknife.svg" alt="" class="dailyIcons">
+                        <p>${recipe.dishTypes[0]}</p>
+                        </span>
+                </div>
+            </a>`
+            )
+        })
+
+    secondary.innerHTML = otherRecipesArrayArticles.join(' ');
+
+    jsonOtherRecipesInDetails.forEach(recipe => {
+        const favBtn = document.getElementById(recipe.id)
+        evalFavorites(recipe.id)
+        favBtn.addEventListener('click', (event) => {
+            toggleFavorites(recipe.id)
+            event.preventDefault()
+        })
+    });
+} else {
+    fetch('https://api.spoonacular.com/recipes/random?number=4&apiKey=178a79a57ae64393823744c2e5e76fa5')
+        .then(response => response.json())
+        .then(recipes => {
+            const otherRecipesArrayArticles = recipes.recipes.map(recipe => (
+                `<a href="RecipeDetails.html?id=${recipe.id}" class= "otherRecipesBox recipes">
                 <img src="${recipe.image}" alt="" class="dailyImg">
                 <img src="Svg/Guardados/nomarcado.svg" id="${recipe.id}" alt="" class="dailySaves heart">
                 <p class="otherRecipeName">${recipe.title}</p>
@@ -244,22 +232,75 @@ fetch('https://api.spoonacular.com/recipes/random?number=4&apiKey=3f804dd295df42
                     </span>
                 </div>
             </a>`
-        ));
-        secondary.innerHTML = otherRecipesArrayArticles.join(' ');
-        return recipes
-    })
+            ));
+            secondary.innerHTML = otherRecipesArrayArticles.join(' ');
 
-    .then(recipes => {
-        recipes.recipes.forEach(recipe => {
-            const favBtn = document.getElementById(recipe.id)
-            evalFavorites(recipe.id)
-            favBtn.addEventListener('click', (event) => {
-                toggleFavorites(recipe.id)
-                event.preventDefault()
-            })
+            sessionStorage.setItem('otherRecipesInDetails', JSON.stringify(recipes.recipes))
+
+
+            return recipes
+        })
+
+        .then(recipes => {
+            recipes.recipes.forEach(recipe => {
+                const favBtn = document.getElementById(recipe.id)
+                evalFavorites(recipe.id)
+                favBtn.addEventListener('click', (event) => {
+                    toggleFavorites(recipe.id)
+                    event.preventDefault()
+                })
+            });
+        })
+        .catch(error => {
+            console.error('Error: ', error);
+            secondary.innerHTML = '<p>Hubo un error al cargar las recipes, recargue la página</p>';
         });
-    })
-    .catch(error => {
-        console.error('Error: ', error);
-        secondary.innerHTML = '<p>Hubo un error al cargar las recipes, recargue la página</p>';
-    });
+}
+
+
+
+
+
+if (jsonOtherRecipesInSection) {
+    const otherRecipesArrayArticlesInSection = jsonOtherRecipesInSection.map(
+        recipe => {
+
+            return (
+                `<a href="RecipeDetails.html?id=${recipe.id}" class="miniRecipes">
+                        <img src="${recipe.image ? recipe.image : noPhoto}" alt="">
+                        <span>
+                            <p class="miniRecipesName">${recipe.name}</p>
+                            <p class="miniRecipesAuthor">By Andreas Paula</p>
+                        </span>
+                    </a>`
+            )
+        })
+
+    otherRecipesInSection.innerHTML = otherRecipesArrayArticlesInSection.join(' ');
+
+} else {
+    fetch('https://api.spoonacular.com/recipes/random?number=3&apiKey=178a79a57ae64393823744c2e5e76fa5')
+        .then(response => response.json())
+        .then(recipes => {
+            const otherRecipesArrayArticlesInSection = recipes.recipes.map(recipe => (
+                `<a href="RecipeDetails.html?id=${recipe.id}" class="miniRecipes">
+                        <img src="${recipe.image ? recipe.image : noPhoto}" alt="">
+                        <span>
+                            <p class="miniRecipesName">${recipe.name}</p>
+                            <p class="miniRecipesAuthor">By Andreas Paula</p>
+                        </span>
+                    </a>`
+            ));
+            otherRecipesInSection.innerHTML = otherRecipesArrayArticlesInSection.join(' ');
+
+            sessionStorage.setItem('otherRecipesInSection', JSON.stringify(recipes.recipes))
+
+
+            return recipes
+        })
+
+        .catch(error => {
+            console.error('Error: ', error);
+            secondary.innerHTML = '<p>Hubo un error al cargar las recipes, recargue la página</p>';
+        });
+}

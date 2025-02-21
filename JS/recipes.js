@@ -3,18 +3,16 @@ import { evalFavorites } from "./favorites.js";
 
 const recipesSection = document.querySelector('.recipesGrid');
 
+const noPhoto = 'Imagenes/noPhoto/noPhoto.png'
+
 const jsonrecipes = JSON.parse(sessionStorage.getItem('recipes'));
 
-console.log(jsonrecipes)
-
 if (jsonrecipes) {
-    const recipesArrayArticles = jsonrecipes.map(
-        recipe => {
-            /*  console.log(recipe); */
+    const recipesArrayArticles = jsonrecipes.map(recipe => {
 
-            return (
-                `<a href="RecipeDetails.html?id=${recipe.id}" class="recipesBox recipes" id="">
-                    <img src="${recipe.image}" alt="" class="gridPhoto">
+        return (
+            `<a href="RecipeDetails.html?id=${recipe.id}" class="recipesBox recipes" id="">
+                    <img src="${recipe.image ? recipe.image : noPhoto}" alt="" class="gridPhoto">
                     <img src="Svg/Guardados/nomarcado.svg" id="${recipe.id}" alt="" class="saves heart">
                     <p class="recipeName">${recipe.title}</p>
                     <div></div>
@@ -27,13 +25,21 @@ if (jsonrecipes) {
                         </span>
                     </div>
                 </a>`
-            )
-        })
+        )
+    })
 
     recipesArrayArticles.splice(5, 0, '<img src="Imagenes/recipies/Ads.png" alt="Ads" class="ad">');
-    console.log(recipesArrayArticles)
-    console.log(recipesArrayArticles.join(' '))
+
     recipesSection.innerHTML = recipesArrayArticles.join(' ');
+
+    jsonrecipes.forEach(recipe => {
+        const favBtn = document.getElementById(recipe.id)
+        evalFavorites(recipe.id)
+        favBtn.addEventListener('click', (event) => {
+            toggleFavorites(recipe.id)
+            event.preventDefault()
+        })
+    });
 
 } else {
     fetch('https://api.spoonacular.com/recipes/random?number=8&apiKey=178a79a57ae64393823744c2e5e76fa5')
@@ -41,7 +47,7 @@ if (jsonrecipes) {
         .then(recipes => {
             const recipesArrayArticles = recipes.recipes.map(recipe => (
                 `<a href="RecipeDetails.html?id=${recipe.id}" class="recipesBox recipes" id="">
-                    <img src="${recipe.image}" alt="" class="gridPhoto">
+                    <img src="${recipe.image ? recipe.image : noPhoto}" alt="" class="gridPhoto">
                     <img src="Svg/Guardados/nomarcado.svg" id="${recipe.id}" alt="" class="saves heart">
                     <p class="recipeName">${recipe.title}</p>
                     <div></div>

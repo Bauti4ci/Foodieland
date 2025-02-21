@@ -299,6 +299,7 @@ h3 {
     max-width: 400px;
     width: auto;
     height: auto;
+    max-height: 434px;
     gap: 24px;
     background: linear-gradient(180deg, rgba(231, 249, 253, 0) 0%, #E7F9FD 100%);
     padding: 16px 16px 32px 16px;
@@ -381,6 +382,7 @@ h3 {
     max-width: 400px;
     width: auto;
     height: auto;
+    max-height: 434px;
     pointer-events: none;
 }
 

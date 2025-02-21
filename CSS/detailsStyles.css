@@ -179,13 +179,14 @@ h6 {
 .recipeVid {
     width: 65.6%;
     height: auto;
+    max-height: 600px;
     position: relative;
 }
 
 .recipeVidImg {
     border-radius: 30px;
     width: 100%;
-    height: auto;
+    height: 100%;
     max-width: 840px;
     max-height: 600px;
 }
@@ -251,7 +252,7 @@ h2 {
 }
 
 .principalDescription {
-    margin-top: 80px;
+    margin-top: 40px;
     font-size: 1rem;
     font-weight: 400;
     line-height: 28px;
