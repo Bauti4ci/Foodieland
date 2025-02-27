@@ -3,7 +3,7 @@ import { evalFavorites } from "./favorites.js";
 
 const otherRecipesSection = document.querySelector('.otherRecipesGrid');
 
-const noPhoto = 'Imagenes/noPhoto/noPhoto.png'
+const noPhoto = 'Imagenes/noPhoto/noPhoto.jpg'
 
 const jsonOtherRecipes = JSON.parse(sessionStorage.getItem('otherRecipes'));
 
@@ -79,7 +79,7 @@ if (jsonOtherRecipes) {
         .catch(error => {
             console.error('Error: ', error);
 
-            otherRecipesSection.innerHTML = '<p>Hubo un error al cargar las recipes, recargue la página</p>';
+            otherRecipesSection.innerHTML = '<div class="errorContainer"><p class="error">There was an error loading the recipes, <br> please reload the page <img src="Svg/Error/error.svg" alt="" class="errorX"></p></div>';
         });
 
 

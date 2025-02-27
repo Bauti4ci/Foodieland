@@ -1,3 +1,8 @@
+main {
+    margin: 0px 20px;
+    margin-top: 130px;
+}
+
 .loadingScreen {
     margin: 0 auto;
     text-align: center;
@@ -173,7 +178,9 @@ h6 {
 .principalHeader {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 35px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .recipeVid {
@@ -260,11 +267,28 @@ h2 {
     color: rgba(0, 0, 0, 0.6);
 }
 
+.descriptionLoader {
+    background-color: rgba(175, 174, 174, 0.281);
+    width: 1300px;
+    height: 140px;
+    border-radius: 30px;
+
+}
+
 .ingredients {
     margin-top: 80px;
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
+}
+
+.ingredientsLoader {
+    margin-top: 20px;
+    width: 65%;
+    max-width: 840px;
+    height: 790px;
+    background-color: rgba(175, 174, 174, 0.281);
+    border-radius: 30px;
 }
 
 h3 {
@@ -342,6 +366,13 @@ h3 {
     align-items: center;
     align-content: center;
     gap: 24px;
+}
+
+.miniRecipesLoader {
+    width: 410px;
+    height: 120px;
+    background-color: rgba(175, 174, 174, 0.281);
+    border-radius: 30px;
 }
 
 .miniRecipes img {
@@ -505,6 +536,11 @@ h3 {
         text-align: center;
     }
 
+    .descriptionLoader {
+        width: 600px;
+        height: 140px;
+    }
+
     .ingredients {
         width: 95%;
         flex-direction: column;
@@ -512,6 +548,7 @@ h3 {
         align-items: center;
         align-content: center;
     }
+
 
     .otherRecipesInDetails {
         width: 90%;
@@ -545,7 +582,7 @@ h3 {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .name {
         font-size: 0.85rem;
     }
@@ -594,6 +631,11 @@ h3 {
 
     .principalDescription {
         font-size: 0.85rem;
+    }
+
+    .descriptionLoader {
+        width: 330px;
+        height: 140px;
     }
 
     .ads {

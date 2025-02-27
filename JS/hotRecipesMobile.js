@@ -1,6 +1,6 @@
 const startSection = document.querySelector('#mobileStart');
 
-const noPhoto = 'Imagenes/noPhoto/noPhoto.png'
+const noPhoto = 'Imagenes/noPhoto/noPhoto.jpg'
 
 const jsonhotRecipes = JSON.parse(sessionStorage.getItem('hotRecipes'));
 
@@ -90,14 +90,12 @@ if (jsonhotRecipes) {
 
             startSection.innerHTML = hotRecipesArray.join(' ');
 
-            sessionStorage.setItem('hotRecipes', JSON.stringify(recipes.recipes))
-
 
         })
 
         .catch(error => {
             console.error('Error: ', error);
 
-            startSection.innerHTML = '<p>Hubo un error al cargar las recipes, recargue la página</p>';
+            startSection.innerHTML = '<div class="errorContainer"><p class="error">There was an error loading the recipes, <br> please reload the page <img src="Svg/Error/error.svg" alt="" class="errorX"></p></div>';
         });
 }

@@ -7,6 +7,12 @@
     font-style: normal;
 }
 
+.otherRecipeLoader {
+    min-width: 290px;
+    min-height: 316px;
+    background-color: rgba(175, 174, 174, 0.281);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -383,8 +389,8 @@ h6 {
 
 .otherRecipesBox {
     width: auto;
-    max-width: 290px;
-    height: auto;
+    width: 290px;
+    max-height: 316px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -451,6 +457,23 @@ h6 {
 
 .dailyIcons {
     width: 16px;
+    height: auto;
+}
+
+.errorContainer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.error {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.errorX {
+    width: 1.5rem;
     height: auto;
 }
 

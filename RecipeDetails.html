@@ -17,7 +17,7 @@
 <body>
     <header id="header">
         <nav class="nav">
-            <img src="Imagenes/nav/Foodieland..png" alt="Foodieland" class="brandlogo">
+            <a href="Home.html"> <img src="Imagenes/nav/Foodieland..png" alt="Foodieland" class="brandlogo"></a>
 
             <div class="menu">
                 <ul>
@@ -63,9 +63,135 @@
 
     <main>
         <section class="principal">
-            <div class="loadingScreen">
-                <h1>Loading recipe...</h1>
-            </div>
+            <section class="header">
+                <div class="title">
+                    <h1>Loading Recipe...</h1>
+                    <div class="details">
+                        <div class="author hide">
+                            <img src="Imagenes/start/fotoJohnSmith.png" alt="">
+                            <div class="authorName">
+                                <p class="name">John Smith</p>
+                                <p class="date">15 March 2022</p>
+                            </div>
+                        </div>
+                        <div class="detailsRight">
+                            <span class="dividers hide"></span>
+                            <div class="detail">
+                                <img src="Svg/icons/timer.svg" alt="" class="icons">
+                                <div class="detailContext">
+                                    <p class="timeType">PREP TIME</p>
+                                    <p class="time">...</p>
+                                </div>
+                            </div>
+                            <span class="dividers"></span>
+                            <div class="detail">
+                                <img src="Svg/icons/timer.svg" alt="" class="icons">
+                                <div class="detailContext">
+                                    <p class="timeType">COCK TIME</p>
+                                    <p class="time">...</p>
+                                </div>
+                            </div>
+                            <span class="dividers"></span>
+                            <div class="detail">
+                                <img src="Svg/icons/forknife.svg" alt="" class="icons">
+                                <p class="foodType">...</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="author hidden">
+                        <img src="Imagenes/start/fotoJohnSmith.png" alt="">
+                        <div class="authorName">
+                            <p class="name">John Smith</p>
+                            <p class="date">15 March 2022</p>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <span class="interaction">
+                            <button class="optionsBtn">
+                                <img src="Imagenes/header/Group 900.png" alt="">
+                            </button>
+                            <p>PRINT</p>
+                        </span>
+                        <span class="interaction">
+                            <button class="optionsBtn">
+                                <img src="Imagenes/header/Group 901.png" alt="">
+                            </button>
+                            <p>SHARE</p>
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recipePincipal">
+                <div class="principalHeader">
+                    <div class="recipeVid">
+                        <img src="Imagenes/noPhoto/noPhoto.jpg" alt="" class="recipeVidImg">
+                        <img src="Imagenes/recipeDetailsPage/Group 884.png" alt="" class="recipeVidIcon">
+                    </div>
+                    <div class="nutrition">
+                        <div class="nutritionBox">
+                            <h2>Nutrition Information</h2>
+                            <span class="nutData">
+                                <p class="nutDataType">Calories</p>
+                                <p class="nutDataValue">...</p>
+                            </span>
+                            <hr>
+                            <span class="nutData">
+                                <p class="nutDataType">Total Fat</p>
+                                <p class="nutDataValue">...</p>
+                            </span>
+                            <hr>
+                            <span class="nutData">
+                                <p class="nutDataType">Proteins</p>
+                                <p class="nutDataValue">...</p>
+                            </span>
+                            <hr>
+                            <span class="nutData">
+                                <p class="nutDataType">Carbohydrates</p>
+                                <p class="nutDataValue">...</p>
+                            </span>
+                            <hr>
+                            <span class="nutData">
+                                <p class="nutDataType">Cholesterol</p>
+                                <p class="nutDataValue">...</p>
+                            </span>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="principalDescription">
+                    <div class="descriptionLoader"></div>
+                </div>
+            </section>
+
+
+            <section class="ingredients">
+                <div class="list">
+                    <h3>Ingredients</h3>
+                    <div class="ing">
+                        <p>For main dish</p>
+                        <div class="ingredientsLoader"></div>
+                    </div>
+                </div>
+                <div class="otherRecipesInDetails">
+                    <div class="otherRecipesInSection">
+                        <article class="miniRecipesLoader">
+                        </article>
+                        <article class="miniRecipesLoader">
+                        </article>
+                        <article class="miniRecipesLoader">
+                        </article>
+                    </div>
+                    <img src="Imagenes/recipies/Ads.png" alt="" class="ads">
+                </div>
+            </section>
+
+        </section>
+        </div>
         </section>
         <section class="inbox">
             <p class="h7">Deliciousness to your inbox</p>
@@ -84,7 +210,14 @@
                 <h6>You may like these recipe too</h6>
             </div>
             <div class="otherRecipesGrid secondary">
-
+                <a href="RecipeDetails.html?id=${recipe.id}" class="otherRecipeLoader otherRecipesBox recipes">
+                </a>
+                <a href="RecipeDetails.html?id=${recipe.id}" class="otherRecipeLoader otherRecipesBox recipes">
+                </a>
+                <a href="RecipeDetails.html?id=${recipe.id}" class="otherRecipeLoader otherRecipesBox recipes">
+                </a>
+                <a href="RecipeDetails.html?id=${recipe.id}" class="otherRecipeLoader otherRecipesBox recipes">
+                </a>
             </div>
         </section>
 

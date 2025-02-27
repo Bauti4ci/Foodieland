@@ -5,11 +5,9 @@ const params = new URLSearchParams(window.location.search);
 const recipeId = params.get('id');
 const principal = document.querySelector('.principal')
 const secondary = document.querySelector('.secondary')
-const otherRecipesInSection = document.querySelector('.otherRecipesInSection')
-const noPhoto = 'Imagenes/noPhoto/noPhoto.png'
 
+const noPhoto = 'Imagenes/noPhoto/noPhoto.jpg'
 const jsonOtherRecipesInDetails = JSON.parse(sessionStorage.getItem('otherRecipesInDetails'));
-
 const jsonOtherRecipesInSection = JSON.parse(sessionStorage.getItem('otherRecipesInSection'));
 
 
@@ -85,7 +83,7 @@ fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?includeNutrit
         <section class="recipePincipal">
             <div class="principalHeader">
                 <div class="recipeVid">
-                    <img src="${recipe.image}" alt="" class="recipeVidImg">
+                    <img src="${recipe.image ? recipe.image : noPhoto}" alt="" class="recipeVidImg">
                     <img src="Imagenes/recipeDetailsPage/Group 884.png" alt="" class="recipeVidIcon">
                 </div>
                 <div class="nutrition">
@@ -138,7 +136,7 @@ fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?includeNutrit
                 <h3>Ingredients</h3>
                 <div class="ing">
                     <p>For main dish</p>
-                    <ul class"ingridientsList">
+                    <ul class="ingridientsList">
                         ${recipe.extendedIngredients.map(ingredient => {
             return `<span>
                 <input type="checkbox" name="" id="check" class="check">
@@ -151,38 +149,65 @@ fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?includeNutrit
                 </div>
             </div>
             <div class="otherRecipesInDetails">
-                <div class"otherRecipesInSection">
-                    <article class="miniRecipes">
-                        <img src="Imagenes/recipies/meatballs.png" alt="">
-                        <span>
-                            <p class="miniRecipesName">Chicken Meatball with Creamy Chees...</p>
-                            <p class="miniRecipesAuthor">By Andreas Paula</p>
-                        </span>
-                    </article>
-                    <article class="miniRecipes">
-                        <img src="Imagenes/recipies/pasta.png" alt="">
-                        <span>
-                            <p class="miniRecipesName">The Creamiest Creamy Chicken an...</p>
-                            <p class="miniRecipesAuthor">By Andreas Paula</p>
-                        </span>
-                    </article>
-                    <article class="miniRecipes">
-                        <img src="Imagenes/recipies/chickenRice.png" alt="">
-                        <span>
-                            <p class="miniRecipesName">The Best Easy One Pot Chicken and Rice</p>
-                            <p class="miniRecipesAuthor">By Andreas Paula</p>
-                        </span>
-                    </article>
+                <div class="otherRecipesInSection">
+                    
                 </div>
                 <img src="Imagenes/recipies/Ads.png" alt="" class="ads">
             </div>
         </section>`
     })
+    .then(() => {
+        if (jsonOtherRecipesInSection) {
+            const otherRecipesArrayArticlesInSection = jsonOtherRecipesInSection.map(
+                recipe => {
+
+                    return (
+                        `<a href="RecipeDetails.html?id=${recipe.id}" class="miniRecipes">
+                                <img src="${recipe.image ? recipe.image : noPhoto}" alt="">
+                                <span>
+                                    <p class="miniRecipesName">${recipe.title}</p>
+                                    <p class="miniRecipesAuthor">By Andreas Paula</p>
+                                </span>
+                            </a>`
+                    )
+                })
+            const otherRecipesInSection = document.querySelector('.otherRecipesInSection')
+
+            otherRecipesInSection.innerHTML = otherRecipesArrayArticlesInSection.join(' ');
+
+        } else {
+            fetch('https://api.spoonacular.com/recipes/random?number=3&apiKey=178a79a57ae64393823744c2e5e76fa5')
+                .then(response => response.json())
+                .then(recipes => {
+                    const otherRecipesArrayArticlesInSection = recipes.recipes.map(recipe => (
+                        `<a href="RecipeDetails.html?id=${recipe.id}" class="miniRecipes">
+                                <img src="${recipe.image ? recipe.image : noPhoto}" alt="">
+                                <span>
+                                    <p class="miniRecipesName">${recipe.title}</p>
+                                    <p class="miniRecipesAuthor">By Andreas Paula</p>
+                                </span>
+                            </a>`
+                    ));
+
+                    const otherRecipesInSection = document.querySelector('.otherRecipesInSection')
+
+                    otherRecipesInSection.innerHTML = otherRecipesArrayArticlesInSection.join(' ');
+
+                    sessionStorage.setItem('otherRecipesInSection', JSON.stringify(recipes.recipes))
+
+                })
+
+                .catch(error => {
+                    console.error('Error: ', error);
+                    secondary.innerHTML = '<div class="errorContainer"><p class="error">There was an error loading the recipes, <br> please reload the page <img src="Svg/Error/error.svg" alt="" class="errorX"></p></div>';
+                });
+        }
+    })
 
     .catch(error => {
         console.error('Error: ', error);
 
-        principal.innerHTML = '<p class"error">Hubo un error al cargar las recipes, recargue la página</p>';
+        principal.innerHTML = '<div class="errorContainer"><p class="error">There was an error loading the recipes, <br> please reload the page <img src="Svg/Error/error.svg" alt="" class="errorX"></p></div>';
     });
 
 
@@ -253,54 +278,6 @@ if (jsonOtherRecipesInDetails) {
         })
         .catch(error => {
             console.error('Error: ', error);
-            secondary.innerHTML = '<p>Hubo un error al cargar las recipes, recargue la página</p>';
-        });
-}
-
-
-
-
-
-if (jsonOtherRecipesInSection) {
-    const otherRecipesArrayArticlesInSection = jsonOtherRecipesInSection.map(
-        recipe => {
-
-            return (
-                `<a href="RecipeDetails.html?id=${recipe.id}" class="miniRecipes">
-                        <img src="${recipe.image ? recipe.image : noPhoto}" alt="">
-                        <span>
-                            <p class="miniRecipesName">${recipe.name}</p>
-                            <p class="miniRecipesAuthor">By Andreas Paula</p>
-                        </span>
-                    </a>`
-            )
-        })
-
-    otherRecipesInSection.innerHTML = otherRecipesArrayArticlesInSection.join(' ');
-
-} else {
-    fetch('https://api.spoonacular.com/recipes/random?number=3&apiKey=178a79a57ae64393823744c2e5e76fa5')
-        .then(response => response.json())
-        .then(recipes => {
-            const otherRecipesArrayArticlesInSection = recipes.recipes.map(recipe => (
-                `<a href="RecipeDetails.html?id=${recipe.id}" class="miniRecipes">
-                        <img src="${recipe.image ? recipe.image : noPhoto}" alt="">
-                        <span>
-                            <p class="miniRecipesName">${recipe.name}</p>
-                            <p class="miniRecipesAuthor">By Andreas Paula</p>
-                        </span>
-                    </a>`
-            ));
-            otherRecipesInSection.innerHTML = otherRecipesArrayArticlesInSection.join(' ');
-
-            sessionStorage.setItem('otherRecipesInSection', JSON.stringify(recipes.recipes))
-
-
-            return recipes
-        })
-
-        .catch(error => {
-            console.error('Error: ', error);
-            secondary.innerHTML = '<p>Hubo un error al cargar las recipes, recargue la página</p>';
+            secondary.innerHTML = '<div class="errorContainer"><p class="error">There was an error loading the recipes, <br> please reload the page <img src="Svg/Error/error.svg" alt="" class="errorX"></p></div>';
         });
 }

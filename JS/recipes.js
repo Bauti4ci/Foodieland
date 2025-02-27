@@ -3,7 +3,7 @@ import { evalFavorites } from "./favorites.js";
 
 const recipesSection = document.querySelector('.recipesGrid');
 
-const noPhoto = 'Imagenes/noPhoto/noPhoto.png'
+const noPhoto = 'Imagenes/noPhoto/noPhoto.jpg'
 
 const jsonrecipes = JSON.parse(sessionStorage.getItem('recipes'));
 
@@ -15,7 +15,6 @@ if (jsonrecipes) {
                     <img src="${recipe.image ? recipe.image : noPhoto}" alt="" class="gridPhoto">
                     <img src="Svg/Guardados/nomarcado.svg" id="${recipe.id}" alt="" class="saves heart">
                     <p class="recipeName">${recipe.title}</p>
-                    <div></div>
                     <div class="recipesDetails">
                         <span><img src="Svg/icons/timer.svg" alt="" class="recipesIcons">
                             <p>${recipe.readyInMinutes} Minutes</p>
@@ -46,11 +45,10 @@ if (jsonrecipes) {
         .then(response => response.json())
         .then(recipes => {
             const recipesArrayArticles = recipes.recipes.map(recipe => (
-                `<a href="RecipeDetails.html?id=${recipe.id}" class="recipesBox recipes" id="">
+                `<a href="RecipeDetails.html?id=${recipe.id}" class="recipesBox recipes" id="" style="background: linear-gradient(180deg, rgba(231, 249, 253, 0) 0%, #E7F9FD 100%);">
                     <img src="${recipe.image ? recipe.image : noPhoto}" alt="" class="gridPhoto">
                     <img src="Svg/Guardados/nomarcado.svg" id="${recipe.id}" alt="" class="saves heart">
                     <p class="recipeName">${recipe.title}</p>
-                    <div></div>
                     <div class="recipesDetails">
                         <span><img src="Svg/icons/timer.svg" alt="" class="recipesIcons">
                             <p>${recipe.readyInMinutes} Minutes</p>
@@ -82,7 +80,7 @@ if (jsonrecipes) {
 
         .catch(error => {
             console.error('Error: ', error);
-            recipesSection.innerHTML = '<p>Hubo un error al cargar las recipes, recargue la página</p>';
+            recipesSection.innerHTML = '<div class="errorContainer"><p class="error">There was an error loading the recipes, <br> please reload the page <img src="Svg/Error/error.svg" alt="" class="errorX"></p></div>';
         });
 
 }
